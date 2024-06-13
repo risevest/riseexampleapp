@@ -1,4 +1,13 @@
 {
   "name": "Rise Lite",
-  "displayName": "Rise Lite"
+  "displayName": "Rise Lite",
+  "expo": {
+    "extra": {
+      "eas": {
+        "projectId": "e408af13-3915-4f94-aa77-17be98464351"
+      }
+    },
+    "owner": "risevest",
+    "slug": "rise-lite"
+  }
 }

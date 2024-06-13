@@ -1,0 +1,23 @@
+{
+  "cli": {
+    "version": ">= 7.2.0"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal"
+    },
+    "preview": {
+      "distribution": "internal"
+    },
+    "production": {}
+  },
+  "submit": {
+    "production": {
+      "appleId": "allisonkosy@gmail.com",
+      "appleTeamId": "SXY8MZDXJQ",
+      "ascAppId": "6476312537",
+      "bundleIdentifier": "com.rise.lite"
+    }
+  }
+}
