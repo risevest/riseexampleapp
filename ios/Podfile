@@ -42,7 +42,7 @@ setup_permissions([
   'PhotoLibrary',
 ])
 
-target 'riseexampleapp' do
+target 'RiseLite' do
   use_expo_modules!
   pod 'Firebase', :modular_headers => true
   pod 'FirebaseCore', :modular_headers => true
@@ -86,7 +86,7 @@ target 'riseexampleapp' do
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
 
-  target 'riseexampleappTests' do
+  target 'RiseLiteTests' do
     inherit! :complete
     # Pods for testing
   end

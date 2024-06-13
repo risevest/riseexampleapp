@@ -79,9 +79,9 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
-    namespace "com.riseexampleapp"
+    namespace "com.rise.lite"
     defaultConfig {
-        applicationId "com.riseexampleapp"
+        applicationId "com.rise.lite"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

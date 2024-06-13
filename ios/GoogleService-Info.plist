@@ -11,7 +11,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.riseexampleapp</string>
+	<string>com.rise.lite</string>
 	<key>PROJECT_ID</key>
 	<string>deux-298b4</string>
 	<key>STORAGE_BUCKET</key>
@@ -27,7 +27,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:1030094707130:ios:73e6960e4234673a19a583</string>
+	<string>1:1030094707130:ios:346aacdb4dac0b5e19a583</string>
 	<key>DATABASE_URL</key>
 	<string>https://deux-298b4.firebaseio.com</string>
 </dict>
