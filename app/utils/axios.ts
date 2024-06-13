@@ -40,5 +40,16 @@ const instance = axios.create({
 instance.interceptors.request.use(useAuthentication);
 instance.interceptors.request.use(useDeviceInfo);
 
+export const extractErrorMessage = (error: any): string | undefined => {
+  if (typeof error === 'string') {
+    return error;
+  }
+  const message = error?.response?.message;
+  if (message && typeof message === 'string') {
+    return message;
+  }
+  return error?.response?.data?.message;
+};
+
 export default instance;
 // Here

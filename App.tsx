@@ -5,18 +5,16 @@
  * @format
  */
 
-import {NavigationContainer} from '@react-navigation/native';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
 import React, {useEffect} from 'react';
 import CustomerIO from 'app/utils/customer-io';
 import messaging from '@react-native-firebase/messaging';
 
 import {CustomerIO as _CustomerIO} from 'customerio-reactnative';
-import {StyleSheet} from 'react-native';
 
 import {FirebaseMessagingTypes} from '@react-native-firebase/messaging';
 import RootNavigator from 'app/navigator/navigation';
-import {QueryClient, QueryClientProvider} from '@tanstack/react-query';
+import {QueryClientProvider} from '@tanstack/react-query';
 import {queryClient} from 'app/rq';
 
 function App(): React.JSX.Element {
@@ -80,24 +78,5 @@ function App(): React.JSX.Element {
     </SafeAreaProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-});
 
 export default App;
