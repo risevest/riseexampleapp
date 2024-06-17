@@ -10,14 +10,18 @@
     "preview": {
       "distribution": "internal"
     },
-    "production": {}
+    "production": {
+ 
+    }
   },
   "submit": {
     "production": {
-      "appleId": "allisonkosy@gmail.com",
-      "appleTeamId": "SXY8MZDXJQ",
-      "ascAppId": "6476312537",
-      "bundleIdentifier": "com.rise.lite"
+      "ios": {
+        "appleId": "allisonkosy@gmail.com",
+        "appleTeamId": "SXY8MZDXJQ",
+        "ascAppId": "6476312537",
+        "bundleIdentifier": "com.rise.lite"
+      }
     }
   }
 }

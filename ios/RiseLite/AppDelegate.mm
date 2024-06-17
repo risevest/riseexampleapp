@@ -5,7 +5,7 @@
 #import <React/RCTBundleURLProvider.h>
 
 #import <ExpoModulesCore-Swift.h>
-#import <riseexampleapp-Swift.h>
+#import <RiseLite-Swift.h>
 
 
 @implementation AppDelegate

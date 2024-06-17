@@ -12,11 +12,11 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		58AE8AF1A92F4493DD0E0BBB /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1A9646DF0F73B1A167BC0C /* ExpoModulesProvider.swift */; };
-		629F692EB5877FEB8E0ED636 /* Pods_riseexampleapp_riseexampleappTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14865CDD36EBB2E9AC3B57DB /* Pods_riseexampleapp_riseexampleappTests.framework */; };
 		67E4F3062CD3BBB7CAFFDB2C /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5299CD87FD67FE113E9A1D3 /* ExpoModulesProvider.swift */; };
+		725897672F716D4B3BDD70B6 /* Pods_RiseLite_RiseLiteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CDB4587CD8677C81D19E31E /* Pods_RiseLite_RiseLiteTests.framework */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		96BC9501048B95EA838D7BB2 /* Pods_RiseLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFF13E18CFEA264E093DA3B7 /* Pods_RiseLite.framework */; };
 		A7AF74917AF0166963D3FC81 /* Pods_NotificationServiceExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 006200725908869E20B26E4E /* Pods_NotificationServiceExtension.framework */; };
-		E580EF117BF968D96340A535 /* Pods_riseexampleapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2046111B3651DC294C56EAFC /* Pods_riseexampleapp.framework */; };
 		FC0DB77A2C19228400C5AAED /* NotificationServiceExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = FC0DB7732C19228400C5AAED /* NotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FC0DB7832C19230400C5AAED /* NotificationService.m in Sources */ = {isa = PBXBuildFile; fileRef = FC0DB7802C19230400C5AAED /* NotificationService.m */; };
 		FC0DB7842C19230400C5AAED /* MyAppNotificationServicePushHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0DB7822C19230400C5AAED /* MyAppNotificationServicePushHandler.swift */; };
@@ -31,7 +31,7 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = "RiseLite";
+			remoteInfo = RiseLite;
 		};
 		FC0DB7782C19228400C5AAED /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -58,24 +58,24 @@
 
 /* Begin PBXFileReference section */
 		006200725908869E20B26E4E /* Pods_NotificationServiceExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NotificationServiceExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		00E356EE1AD99517003FC87E /* RiseLiteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RiseLiteTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* RiseLiteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RiseLiteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* RiseLiteTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "RiseLiteTests.m"; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* RiseLite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RiseLite.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = "RiseLite/AppDelegate.h"; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = "RiseLite/AppDelegate.mm"; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "RiseLite/Images.xcassets"; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "RiseLite/Info.plist"; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "RiseLite/main.m"; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* RiseLiteTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RiseLiteTests.m; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* RiseLite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RiseLite.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = RiseLite/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = RiseLite/AppDelegate.mm; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = RiseLite/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = RiseLite/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = RiseLite/main.m; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = RiseLite/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		14865CDD36EBB2E9AC3B57DB /* Pods_riseexampleapp_riseexampleappTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_riseexampleapp_riseexampleappTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2046111B3651DC294C56EAFC /* Pods_riseexampleapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_riseexampleapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B4392A12AC88292D35C810B /* Pods-RiseLite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RiseLite.debug.xcconfig"; path = "Target Support Files/Pods-RiseLite/Pods-RiseLite.debug.xcconfig"; sourceTree = "<group>"; };
 		50C53E77C701D2D9C0CEF927 /* Pods-NotificationServiceExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotificationServiceExtension.debug.xcconfig"; path = "Target Support Files/Pods-NotificationServiceExtension/Pods-NotificationServiceExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-RiseLite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RiseLite.release.xcconfig"; path = "Target Support Files/Pods-RiseLite/Pods-RiseLite.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-RiseLite-RiseLiteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RiseLite-RiseLiteTests.debug.xcconfig"; path = "Target Support Files/Pods-RiseLite-RiseLiteTests/Pods-RiseLite-RiseLiteTests.debug.xcconfig"; sourceTree = "<group>"; };
-		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = "RiseLite/LaunchScreen.storyboard"; sourceTree = "<group>"; };
+		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = RiseLite/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-RiseLite-RiseLiteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RiseLite-RiseLiteTests.release.xcconfig"; path = "Target Support Files/Pods-RiseLite-RiseLiteTests/Pods-RiseLite-RiseLiteTests.release.xcconfig"; sourceTree = "<group>"; };
+		8CDB4587CD8677C81D19E31E /* Pods_RiseLite_RiseLiteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RiseLite_RiseLiteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFF13E18CFEA264E093DA3B7 /* Pods_RiseLite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RiseLite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5299CD87FD67FE113E9A1D3 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-RiseLite/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
 		DB15A7A7EB3A2043E8BE2E8F /* Pods-NotificationServiceExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NotificationServiceExtension.release.xcconfig"; path = "Target Support Files/Pods-NotificationServiceExtension/Pods-NotificationServiceExtension.release.xcconfig"; sourceTree = "<group>"; };
 		ED1A9646DF0F73B1A167BC0C /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-RiseLite-RiseLiteTests/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
@@ -96,7 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				629F692EB5877FEB8E0ED636 /* Pods_riseexampleapp_riseexampleappTests.framework in Frameworks */,
+				725897672F716D4B3BDD70B6 /* Pods_RiseLite_RiseLiteTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,7 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E580EF117BF968D96340A535 /* Pods_riseexampleapp.framework in Frameworks */,
+				96BC9501048B95EA838D7BB2 /* Pods_RiseLite.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,7 +125,7 @@
 				00E356F21AD99517003FC87E /* RiseLiteTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = "RiseLiteTests";
+			path = RiseLiteTests;
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -147,7 +147,7 @@
 				13B07FB71A68108700A75B9A /* main.m */,
 				13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */,
 			);
-			name = "RiseLite";
+			name = RiseLite;
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
@@ -155,8 +155,8 @@
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				006200725908869E20B26E4E /* Pods_NotificationServiceExtension.framework */,
-				2046111B3651DC294C56EAFC /* Pods_riseexampleapp.framework */,
-				14865CDD36EBB2E9AC3B57DB /* Pods_riseexampleapp_riseexampleappTests.framework */,
+				BFF13E18CFEA264E093DA3B7 /* Pods_RiseLite.framework */,
+				8CDB4587CD8677C81D19E31E /* Pods_RiseLite_RiseLiteTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -175,7 +175,7 @@
 			children = (
 				D5299CD87FD67FE113E9A1D3 /* ExpoModulesProvider.swift */,
 			);
-			name = "RiseLite";
+			name = RiseLite;
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
@@ -293,8 +293,8 @@
 			dependencies = (
 				FC0DB7792C19228400C5AAED /* PBXTargetDependency */,
 			);
-			name = "RiseLite";
-			productName = "RiseLite";
+			name = RiseLite;
+			productName = RiseLite;
 			productReference = 13B07F961A680F5B00A75B9A /* RiseLite.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -663,7 +663,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "RiseLiteTests/Info.plist";
+				INFOPLIST_FILE = RiseLiteTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -676,7 +676,7 @@
 					"$(inherited)",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_DEBUG";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.rise.lite";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rise.lite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RiseLite.app/RiseLite";
 			};
@@ -688,7 +688,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
-				INFOPLIST_FILE = "RiseLiteTests/Info.plist";
+				INFOPLIST_FILE = RiseLiteTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -701,7 +701,7 @@
 					"$(inherited)",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_RELEASE";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.rise.lite";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rise.lite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RiseLite.app/RiseLite";
 			};
@@ -716,8 +716,8 @@
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = "RiseLite/Info.plist";
-             INFOPLIST_KEY_CFBundleDisplayName = "Rise Lite";
+				INFOPLIST_FILE = RiseLite/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Rise Lite";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -729,8 +729,8 @@
 					"-lc++",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_DEBUG";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.rise.lite";
-				PRODUCT_NAME = "RiseLite";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rise.lite;
+				PRODUCT_NAME = RiseLite;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -745,8 +745,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				INFOPLIST_FILE = "RiseLite/Info.plist";
-             INFOPLIST_KEY_CFBundleDisplayName = "Rise Lite";
+				INFOPLIST_FILE = RiseLite/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Rise Lite";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -758,8 +758,8 @@
 					"-lc++",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_RELEASE";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.rise.lite";
-				PRODUCT_NAME = "RiseLite";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rise.lite;
+				PRODUCT_NAME = RiseLite;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -972,7 +972,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_DEBUG";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.rise.lite";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rise.lite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
@@ -1015,7 +1015,7 @@
 				MARKETING_VERSION = 1.0;
 				MTL_FAST_MATH = YES;
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_RELEASE";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.rise.lite";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rise.lite;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
