@@ -1,0 +1,9 @@
+{
+  "test_url": "https://sdktest.smileidentity.com/",
+  "test_lambda_url": "https://testapi.smileidentity.com/v1/",
+  "prod_url": "https://sdk.smileidentity.com/",
+  "prod_lambda_url": "https://api.smileidentity.com/v1/",
+  "auth_token": "",
+  "partner_id": "786",
+  "version": "1.0.0"
+}

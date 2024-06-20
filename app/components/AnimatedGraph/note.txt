@@ -1,0 +1,8 @@
+https://github.com/software-mansion/react-native-gesture-handler/issues/1194
+
+https://docs.swmansion.com/react-native-gesture-handler/docs/
+
+https://www.d3-graph-gallery.com/line.html
+https://www.d3-graph-gallery.com/area.html
+
+https://medium.com/@marshalmurphy/building-a-bar-graph-in-react-native-with-d3-react-native-art-9e03f4c6a273

@@ -1,0 +1,70 @@
+export enum PORTFOLIO_TYPES {
+  EDIT_USER_PORTFOLIO_ERROR = 'plan/EDIT_USER_PORTFOLIO_ERROR',
+  EDIT_USER_PORTFOLIO_REQUEST = 'plan/EDIT_USER_PORTFOLIO_REQUEST',
+  EDIT_USER_PORTFOLIO_SUCCESS = 'plan/EDIT_USER_PORTFOLIO_SUCCESS',
+
+  FETCH_BUILD_WEALTH_PORTFOLIO_ERROR = 'plan/FETCH_BUILD_WEALTH_PORTFOLIO_ERROR',
+  FETCH_BUILD_WEALTH_PORTFOLIO_REQUEST = 'plan/FETCH_BUILD_WEALTH_PORTFOLIO_REQUEST',
+  FETCH_BUILD_WEALTH_PORTFOLIO_SUCCESS = 'plan/FETCH_BUILD_WEALTH_PORTFOLIO_SUCCESS',
+
+  FETCH_RISE_PORTFOLIO_ERROR = 'plan/FETCH_RISE_PORTFOLIO_ERROR',
+  FETCH_RISE_PORTFOLIO_REQUEST = 'plan/FETCH_RISE_PORTFOLIO_REQUEST',
+  FETCH_RISE_PORTFOLIO_SUCCESS = 'plan/FETCH_RISE_PORTFOLIO_SUCCESS',
+
+  FETCH_RISE_REAL_ESTATE_PORTFOLIO_ERROR = 'plan/FETCH_RISE_REAL_ESTATE_PORTFOLIO_ERROR',
+  FETCH_RISE_REAL_ESTATE_PORTFOLIO_REQUEST = 'plan/FETCH_RISE_REAL_ESTATE_PORTFOLIO_REQUEST',
+  FETCH_RISE_REAL_ESTATE_PORTFOLIO_SUCCESS = 'plan/FETCH_RISE_REAL_ESTATE_PORTFOLIO_SUCCESS',
+
+  FETCH_RISE_STOCKS_PORTFOLIO_ERROR = 'plan/FETCH_RISE_STOCKS_PORTFOLIO_ERROR',
+  FETCH_RISE_STOCKS_PORTFOLIO_REQUEST = 'plan/FETCH_RISE_STOCKS_PORTFOLIO_REQUEST',
+  FETCH_RISE_STOCKS_PORTFOLIO_SUCCESS = 'plan/FETCH_RISE_STOCKS_PORTFOLIO_SUCCESS',
+
+  FETCH_USER_PORTFOLIO_ERROR = 'plan/FETCH_USER_PORTFOLIO_ERROR',
+  FETCH_USER_PORTFOLIO_REQUEST = 'plan/FETCH_USER_PORTFOLIO_REQUEST',
+  FETCH_USER_PORTFOLIO_SUCCESS = 'plan/FETCH_USER_PORTFOLIO_SUCCESS'
+}
+
+export interface IAssetShape {
+  assetValue: number
+  id: number
+  percentage: number | undefined
+  title: string
+}
+
+export interface IAssetDistribution {
+  assetCount: number | undefined
+  assetDistribution: IAssetShape[]
+  netWorth: number | undefined
+}
+
+export type FetchPortfolioSuccess = {
+  assetDistribution: IAssetDistribution
+  type: PORTFOLIO_TYPES.FETCH_USER_PORTFOLIO_SUCCESS
+}
+
+export type FetchUserBuildWealthPortfolioSuccess = {
+  type: PORTFOLIO_TYPES.FETCH_BUILD_WEALTH_PORTFOLIO_SUCCESS
+  userPlan: IUserPortfolio
+}
+
+export type FetchRisePortfolioSuccess = {
+  risePortfolio: IRisePortfolioData
+  type: PORTFOLIO_TYPES.FETCH_RISE_PORTFOLIO_SUCCESS
+}
+
+export type FetchRiseRealEstatePortfolioSuccess = {
+  riseRealEstatePortfolio: IRealEstatePortfolioAssetClass
+  type: PORTFOLIO_TYPES.FETCH_RISE_REAL_ESTATE_PORTFOLIO_SUCCESS
+}
+
+export type FetchRiseStocksPortfolioSuccess = {
+  riseStocksPortfolio: IStockPortfolioAssetClass
+  type: PORTFOLIO_TYPES.FETCH_RISE_STOCKS_PORTFOLIO_SUCCESS
+}
+
+export type PortfolioActions =
+  | FetchPortfolioSuccess
+  | FetchRisePortfolioSuccess
+  | FetchRiseRealEstatePortfolioSuccess
+  | FetchRiseStocksPortfolioSuccess
+  | FetchUserBuildWealthPortfolioSuccess

@@ -1,5 +1,34 @@
-export const API_BASE_URL =
-  'https://manator-staging-qogza.ondigitalocean.app/api/v2';
-export const NEW_API_BASE_URL = 'https://api.staging.risevest.co/api/v1/';
-export const CUSTOMER_IO_SITE_ID = 'ff9428c80a3de312eafc';
-export const CUSTOMER_IO_API_KEY = '15e09909205e971e3b0d';
+export const API_BASE_URL = String(process.env.API_BASE_URL)
+export const NEW_API_BASE_URL = String(process.env.NEW_API_BASE_URL)
+export const PIN_SERVICE = String(process.env.PIN_SERVICE)
+export const EMAIL_PASSWORD_SERVICE = String(process.env.EMAIL_PASSWORD_SERVICE)
+export const TEST_EMAIL = String(process.env.TEST_EMAIL)
+export const TEST_PHONE = String(process.env.TEST_PHONE)
+export const TEST_PASSWORD = String(process.env.TEST_PASSWORD)
+export const APPSFLYERS_DEV_KEY = String(process.env.APPSFLYERS_DEV_KEY)
+export const APPSFLYERS_APP_ID = String(process.env.APPSFLYERS_APP_ID)
+export const WEBSITE_BASE_URL = String(process.env.WEBSITE_BASE_URL)
+export const CONTACT_EMAIL = String(process.env.CONTACT_EMAIL)
+export const TELEGRAM_URL = String(process.env.TELEGRAM_URL)
+export const INSTAGRAM_URL = String(process.env.INSTAGRAM_URL)
+export const FACEBOOK_URL = String(process.env.FACEBOOK_URL)
+export const TWITTER_URL = String(process.env.TWITTER_URL)
+export const UX_CAM_KEY = String(process.env.UX_CAM_KEY)
+export const EXPO_UPDATE_URL = String(process.env.EXPO_UPDATE_URL)
+export const SENTRY_DSN = String(process.env.SENTRY_DSN)
+export const FRESH_CHAT_APP_ID = String(process.env.FRESH_CHAT_APP_ID)
+export const FRESH_CHAT_APP_KEY = String(process.env.FRESH_CHAT_APP_KEY)
+export const MOMO_SUCCESS_URL = String(process.env.MOMO_SUCCESS_URL)
+export const METAMAP_CLIENT_ID = String(process.env.METAMAP_CLIENT_ID)
+export const METAMAP_FLOW_ID = String(process.env.METAMAP_FLOW_ID)
+export const FACEBOOK_APPLICATION_ID = String(
+  process.env.FACEBOOK_APPLICATION_ID
+)
+export const VOLUME_APPLICATION_ID = String(process.env.VOLUME_APPLICATION_ID)
+export const SMILE_SANDBOX_ID_AUTHORITY_IMAGE = String(
+  process.env.SMILE_SANDBOX_ID_AUTHORITY_IMAGE
+)
+export const AMPLITUDE_API_KEY = String(process.env.AMPLITUDE_API_KEY)
+export const CUSTOMER_IO_SITE_ID = String(process.env.CUSTOMER_IO_SITE_ID)
+export const CUSTOMER_IO_API_KEY = String(process.env.CUSTOMER_IO_API_KEY)
+export const FUNDING_CALLBACK_URL = String(process.env.FUNDING_CALLBACK_URL)

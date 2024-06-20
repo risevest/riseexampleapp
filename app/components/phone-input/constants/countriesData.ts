@@ -1,0 +1,3110 @@
+import { keyBy } from 'lodash'
+
+export interface CountryData {
+  callingCode: string
+  code: string
+  currencyCode: string
+  currencyNameEn: string
+  flag: string
+  nameEn: string
+  nameLocal: string
+  region: string
+  tinName: string
+  tinType: string
+}
+
+export const countriesData: CountryData[] = [
+  {
+    callingCode: '376',
+    code: 'AD',
+    currencyCode: 'EUR',
+    currencyNameEn: 'Euro',
+    flag: '🇦🇩',
+    nameEn: 'Andorra',
+    nameLocal: 'Andorra',
+    region: 'Europe',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '93',
+    code: 'AF',
+    currencyCode: 'AFN',
+    currencyNameEn: 'Afghan afghani',
+    flag: '🇦🇫',
+    nameEn: 'Afghanistan',
+    nameLocal:
+      'د افغانستان اسلامي دولتدولت اسلامی افغانستان, جمهوری اسلامی افغانستان',
+    region: 'Asia & Pacific',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '1268',
+    code: 'AG',
+    currencyCode: 'XCD',
+    currencyNameEn: 'East Caribbean dollar',
+    flag: '🇦🇬',
+    nameEn: 'Antigua and Barbuda',
+    nameLocal: 'Antigua and Barbuda',
+    region: 'South/Latin America',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '1264',
+    code: 'AI',
+    currencyCode: 'XCD',
+    currencyNameEn: 'East Caribbean dollar',
+    flag: '🇦🇮',
+    nameEn: 'Anguilla',
+    nameLocal: 'Anguilla',
+    region: 'South/Latin America',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '355',
+    code: 'AL',
+    currencyCode: 'ALL',
+    currencyNameEn: 'Albanian lek',
+    flag: '🇦🇱',
+    nameEn: 'Albania',
+    nameLocal: 'Shqipëria',
+    region: 'Europe',
+    tinName: 'Numri i Identifikimit për Personin e Tatueshëm',
+    tinType: 'NIPT'
+  },
+  {
+    callingCode: '374',
+    code: 'AM',
+    currencyCode: 'AMD',
+    currencyNameEn: 'Armenian dram',
+    flag: '🇦🇲',
+    nameEn: 'Armenia',
+    nameLocal: 'Հայաստան',
+    region: 'Europe',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '244',
+    code: 'AO',
+    currencyCode: 'AOA',
+    currencyNameEn: 'Angolan kwanza',
+    flag: '🇦🇴',
+    nameEn: 'Angola',
+    nameLocal: 'Angola',
+    region: 'Africa',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '672',
+    code: 'AQ',
+    currencyCode: '',
+    currencyNameEn: '',
+    flag: '🇦🇶',
+    nameEn: 'Antarctica',
+    nameLocal: 'Antarctica, Antártico, Antarctique, Антарктике',
+    region: 'Asia & Pacific',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '54',
+    code: 'AR',
+    currencyCode: 'ARS',
+    currencyNameEn: 'Argentine peso',
+    flag: '🇦🇷',
+    nameEn: 'Argentina',
+    nameLocal: 'Argentina',
+    region: 'South/Latin America',
+    tinName: 'Código Único de Identificación Tributaria',
+    tinType: 'CUIT'
+  },
+  {
+    callingCode: '1684',
+    code: 'AS',
+    currencyCode: 'USD',
+    currencyNameEn: 'United States dollar',
+    flag: '🇦🇸',
+    nameEn: 'American Samoa',
+    nameLocal: 'American Samoa',
+    region: 'Asia & Pacific',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '43',
+    code: 'AT',
+    currencyCode: 'EUR',
+    currencyNameEn: 'Euro',
+    flag: '🇦🇹',
+    nameEn: 'Austria',
+    nameLocal: 'Österreich',
+    region: 'Europe',
+    tinName: 'Umsatzsteuer-Identifikationsnummer',
+    tinType: 'UID'
+  },
+  {
+    callingCode: '61',
+    code: 'AU',
+    currencyCode: 'AUD',
+    currencyNameEn: 'Australian dollar',
+    flag: '🇦🇺',
+    nameEn: 'Australia',
+    nameLocal: 'Australia',
+    region: 'Asia & Pacific',
+    tinName: 'Australian Business Number',
+    tinType: 'ABN'
+  },
+  {
+    callingCode: '297',
+    code: 'AW',
+    currencyCode: 'AWG',
+    currencyNameEn: 'Aruban florin',
+    flag: '🇦🇼',
+    nameEn: 'Aruba',
+    nameLocal: 'Aruba',
+    region: 'South/Latin America',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '358',
+    code: 'AX',
+    currencyCode: 'EUR',
+    currencyNameEn: 'Euro',
+    flag: '🇦🇽',
+    nameEn: 'Åland Islands',
+    nameLocal: 'Åland',
+    region: 'Europe',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '994',
+    code: 'AZ',
+    currencyCode: 'AZN',
+    currencyNameEn: 'Azerbaijani manat',
+    flag: '🇦🇿',
+    nameEn: 'Azerbaijan',
+    nameLocal: 'Azərbaycan',
+    region: 'Asia & Pacific',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '387',
+    code: 'BA',
+    currencyCode: 'BAM',
+    currencyNameEn: 'Bosnia and Herzegovina convertible mark',
+    flag: '🇧🇦',
+    nameEn: 'Bosnia and Herzegovina',
+    nameLocal: 'Bosna i Hercegovina',
+    region: 'Europe',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '1246',
+    code: 'BB',
+    currencyCode: 'BBD',
+    currencyNameEn: 'Barbados dollar',
+    flag: '🇧🇧',
+    nameEn: 'Barbados',
+    nameLocal: 'Barbados',
+    region: 'South/Latin America',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '880',
+    code: 'BD',
+    currencyCode: 'BDT',
+    currencyNameEn: 'Bangladeshi taka',
+    flag: '🇧🇩',
+    nameEn: 'Bangladesh',
+    nameLocal: 'গণপ্রজাতন্ত্রী বাংলাদেশ',
+    region: 'Asia & Pacific',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '32',
+    code: 'BE',
+    currencyCode: 'EUR',
+    currencyNameEn: 'Euro',
+    flag: '🇧🇪',
+    nameEn: 'Belgium',
+    nameLocal: 'België, Belgique, Belgien',
+    region: 'Europe',
+    tinName: 'BTW identificatienummer / Numéro de TVA',
+    tinType: 'n° TVABTW-nr Mwst-nr'
+  },
+  {
+    callingCode: '226',
+    code: 'BF',
+    currencyCode: 'XOF',
+    currencyNameEn: 'CFA franc BCEAO',
+    flag: '🇧🇫',
+    nameEn: 'Burkina Faso',
+    nameLocal: 'Burkina Faso',
+    region: 'Africa',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '359',
+    code: 'BG',
+    currencyCode: 'BGN',
+    currencyNameEn: 'Bulgarian lev',
+    flag: '🇧🇬',
+    nameEn: 'Bulgaria',
+    nameLocal: 'България',
+    region: 'Europe',
+    tinName: 'Идентификационен номер по ДДС',
+    tinType: 'ДДС номер'
+  },
+  {
+    callingCode: '973',
+    code: 'BH',
+    currencyCode: 'BHD',
+    currencyNameEn: 'Bahraini dinar',
+    flag: '🇧🇭',
+    nameEn: 'Bahrain',
+    nameLocal: 'البحرين',
+    region: 'Arab States',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '257',
+    code: 'BI',
+    currencyCode: 'BIF',
+    currencyNameEn: 'Burundian franc',
+    flag: '🇧🇮',
+    nameEn: 'Burundi',
+    nameLocal: 'Burundi',
+
+    region: 'Africa',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '229',
+    code: 'BJ',
+    currencyCode: 'XOF',
+    currencyNameEn: 'CFA franc BCEAO',
+    flag: '🇧🇯',
+    nameEn: 'Benin',
+    nameLocal: 'Bénin',
+
+    region: 'Africa',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '590',
+    code: 'BL',
+    currencyCode: 'EUR',
+    currencyNameEn: 'Euro',
+    flag: '🇧🇱',
+    nameEn: 'Saint Barthélemy',
+    nameLocal: 'Saint-Barthélemy',
+
+    region: 'South/Latin America',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '1441',
+    code: 'BM',
+    currencyCode: 'BMD',
+    currencyNameEn: 'Bermudian dollar',
+    flag: '🇧🇲',
+    nameEn: 'Bermuda',
+    nameLocal: 'Bermuda',
+    region: 'North America',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '673',
+    code: 'BN',
+    currencyCode: 'BND',
+    currencyNameEn: 'Brunei dollar',
+    flag: '🇧🇳',
+    nameEn: 'Brunei Darussalam',
+    nameLocal: 'Brunei Darussalam',
+    region: 'Asia & Pacific',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '591',
+    code: 'BO',
+    currencyCode: 'BOP',
+    currencyNameEn: '',
+    flag: '🇧🇴',
+    nameEn: 'Bolivia (Plurinational State of)',
+    nameLocal: 'Bolivia, Bulibiya, Volívia, Wuliwya',
+    region: 'South/Latin America',
+    tinName: 'Número de Identificación Tributaria',
+    tinType: 'NIT'
+  },
+  {
+    callingCode: '5997',
+    code: 'BQ',
+    currencyCode: 'USD',
+    currencyNameEn: 'United States dollar',
+    flag: '🇧🇶',
+    nameEn: 'Bonaire, Sint Eustatius and Saba',
+    nameLocal: 'Caribisch Nederland',
+    region: 'Unknown',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '55',
+    code: 'BR',
+    currencyCode: 'BRL',
+    currencyNameEn: 'Brazilian real',
+    flag: '🇧🇷',
+    nameEn: 'Brazil',
+    nameLocal: 'Brasil',
+    region: 'South/Latin America',
+    tinName: 'Cadastro Nacional de Pessoa Jurídica',
+    tinType: 'CNPJ'
+  },
+  {
+    callingCode: '975',
+    code: 'BT',
+    currencyCode: 'BTN',
+    currencyNameEn: 'Bhutanese ngultrum',
+    flag: '🇧🇹',
+    nameEn: 'Bhutan',
+    nameLocal: 'འབྲུག་ཡུལ',
+    region: 'Asia & Pacific',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '47',
+    code: 'BV',
+    currencyCode: 'NOK',
+    currencyNameEn: 'Norwegian krone',
+    flag: '🇧🇻',
+    nameEn: 'Bouvet Island',
+    nameLocal: 'Bouvetøya',
+    region: 'South/Latin America',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '267',
+    code: 'BW',
+    currencyCode: 'BWP',
+    currencyNameEn: 'Botswana pula',
+    flag: '🇧🇼',
+    nameEn: 'Botswana',
+    nameLocal: 'Botswana',
+    region: 'Africa',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '375',
+    code: 'BY',
+    currencyCode: 'BYR',
+    currencyNameEn: '',
+    flag: '🇧🇾',
+    nameEn: 'Belarus',
+    nameLocal: 'Беларусь',
+    region: 'Europe',
+    tinName: 'Учетный номер плательщика',
+    tinType: 'УНП (UNP)'
+  },
+  {
+    callingCode: '501',
+    code: 'BZ',
+    currencyCode: 'BZD',
+    currencyNameEn: 'Belize dollar',
+    flag: '🇧🇿',
+    nameEn: 'Belize',
+    nameLocal: 'Belize',
+    region: 'South/Latin America',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '1',
+    code: 'CA',
+    currencyCode: 'CAD',
+    currencyNameEn: 'Canadian dollar',
+    flag: '🇨🇦',
+    nameEn: 'Canada',
+    nameLocal: 'Canada',
+    region: 'North America',
+    tinName: 'Business Number',
+    tinType: 'BN / NE'
+  },
+  {
+    callingCode: '41',
+    code: 'CH',
+    currencyCode: 'CHE',
+    currencyNameEn: 'WIR Euro (complementary currency)',
+    flag: '🇨🇭',
+    nameEn: 'Switzerland',
+    nameLocal: 'Schweiz, Suisse, Svizzera, Svizra',
+    region: 'Europe',
+    tinName: 'Mehrwertsteuernummer',
+    tinType: 'MWST/TVA/IVA'
+  },
+  {
+    callingCode: '225',
+    code: 'CI',
+    currencyCode: 'XOF',
+    currencyNameEn: 'CFA franc BCEAO',
+    flag: '🇨🇮',
+    nameEn: "Côte d'Ivoire",
+    nameLocal: "Côte d'Ivoire",
+
+    region: 'Africa',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '56',
+    code: 'CL',
+    currencyCode: 'CLP',
+    currencyNameEn: 'Chilean peso',
+    flag: '🇨🇱',
+    nameEn: 'Chile',
+    nameLocal: 'Chile',
+
+    region: 'South/Latin America',
+    tinName: 'Rol Único Tributario',
+    tinType: 'RUT'
+  },
+  {
+    callingCode: '237',
+    code: 'CM',
+    currencyCode: 'XAF',
+    currencyNameEn: 'CFA franc BEAC',
+    flag: '🇨🇲',
+    nameEn: 'Cameroon',
+    nameLocal: 'Cameroun, Cameroon',
+
+    region: 'Africa',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '86',
+    code: 'CN',
+    currencyCode: 'CNY',
+    currencyNameEn: 'Renminbi (Chinese) yuan',
+    flag: '🇨🇳',
+    nameEn: 'China',
+    nameLocal: '中国',
+
+    region: 'Asia & Pacific',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '57',
+    code: 'CO',
+    currencyCode: 'COP',
+    currencyNameEn: 'Colombian peso',
+    flag: '🇨🇴',
+    nameEn: 'Colombia',
+    nameLocal: 'Colombia',
+
+    region: 'South/Latin America',
+    tinName: 'Número De Identificación Tributaria',
+    tinType: 'NIT'
+  },
+  {
+    callingCode: '506',
+    code: 'CR',
+    currencyCode: 'CRC',
+    currencyNameEn: 'Costa Rican colon',
+    flag: '🇨🇷',
+    nameEn: 'Costa Rica',
+    nameLocal: 'Costa Rica',
+
+    region: 'South/Latin America',
+    tinName: 'Cédula Jurídica',
+    tinType: ''
+  },
+  {
+    callingCode: '53',
+    code: 'CU',
+    currencyCode: 'CUC',
+    currencyNameEn: 'Cuban convertible peso',
+    flag: '🇨🇺',
+    nameEn: 'Cuba',
+    nameLocal: 'Cuba',
+
+    region: 'South/Latin America',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '238',
+    code: 'CV',
+    currencyCode: 'CVE',
+    currencyNameEn: 'Cape Verdean escudo',
+    flag: '🇨🇻',
+    nameEn: 'Cabo Verde',
+    nameLocal: 'Cabo Verde',
+
+    region: 'Africa',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '599',
+    code: 'CW',
+    currencyCode: 'ANG',
+    currencyNameEn: 'Netherlands Antillean guilder',
+    flag: '🇨🇼',
+    nameEn: 'Curaçao',
+    nameLocal: 'Curaçao',
+
+    region: 'Unknown',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '61',
+    code: 'CX',
+    currencyCode: 'AUD',
+    currencyNameEn: 'Australian dollar',
+    flag: '🇨🇽',
+    nameEn: 'Christmas Island',
+    nameLocal: 'Christmas Island',
+    region: 'Asia & Pacific',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '357',
+    code: 'CY',
+    currencyCode: 'EUR',
+    currencyNameEn: 'Euro',
+    flag: '🇨🇾',
+    nameEn: 'Cyprus',
+    nameLocal: 'Κύπρος, Kibris',
+
+    region: 'Europe',
+    tinName: 'Αριθμός Εγγραφής Φ.Π.Α.',
+    tinType: 'ΦΠΑ'
+  },
+  {
+    callingCode: '49',
+    code: 'DE',
+    currencyCode: 'EUR',
+    currencyNameEn: 'Euro',
+    flag: '🇩🇪',
+    nameEn: 'Germany',
+    nameLocal: 'Deutschland',
+
+    region: 'Europe',
+    tinName: 'Umsatzsteuer-Identifikationsnummer',
+    tinType: 'USt-IdNr.'
+  },
+  {
+    callingCode: '253',
+    code: 'DJ',
+    currencyCode: 'DJF',
+    currencyNameEn: 'Djiboutian franc',
+    flag: '🇩🇯',
+    nameEn: 'Djibouti',
+    nameLocal: 'Djibouti, جيبوتي, Jabuuti, Gabuutih',
+
+    region: 'Arab States',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '45',
+    code: 'DK',
+    currencyCode: 'DKK',
+    currencyNameEn: 'Danish krone',
+    flag: '🇩🇰',
+    nameEn: 'Denmark',
+    nameLocal: 'Danmark',
+
+    region: 'Europe',
+    tinName: 'Momsregistreringsnummer',
+    tinType: 'CVR'
+  },
+  {
+    callingCode: '767',
+    code: 'DM',
+    currencyCode: 'XCD',
+    currencyNameEn: 'East Caribbean dollar',
+    flag: '🇩🇲',
+    nameEn: 'Dominica',
+    nameLocal: 'Dominica',
+    region: 'South/Latin America',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '213',
+    code: 'DZ',
+    currencyCode: 'DZD',
+    currencyNameEn: 'Algerian dinar',
+    flag: '🇩🇿',
+    nameEn: 'Algeria',
+    nameLocal: 'الجزائر',
+
+    region: 'Arab States',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '593',
+    code: 'EC',
+    currencyCode: 'USD',
+    currencyNameEn: 'United States dollar',
+    flag: '🇪🇨',
+    nameEn: 'Ecuador',
+    nameLocal: 'Ecuador',
+
+    region: 'South/Latin America',
+    tinName: 'Número de Registro Unico de Contribuyentes',
+    tinType: 'RUC'
+  },
+  {
+    callingCode: '372',
+    code: 'EE',
+    currencyCode: 'EUR',
+    currencyNameEn: 'Euro',
+    flag: '🇪🇪',
+    nameEn: 'Estonia',
+    nameLocal: 'Eesti',
+    region: 'Europe',
+    tinName: 'Käibemaksukohustuslase number',
+    tinType: 'KMKR'
+  },
+  {
+    callingCode: '20',
+    code: 'EG',
+    currencyCode: 'EGP',
+    currencyNameEn: 'Egyptian pound',
+    flag: '🇪🇬',
+    nameEn: 'Egypt',
+    nameLocal: 'مصر',
+
+    region: 'Arab States',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '212',
+    code: 'EH',
+    currencyCode: 'MAD',
+    currencyNameEn: 'Moroccan dirham',
+    flag: '🇪🇭',
+    nameEn: 'Western Sahara',
+    nameLocal: 'Sahara Occidental',
+
+    region: 'Africa',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '291',
+    code: 'ER',
+    currencyCode: 'ERN',
+    currencyNameEn: 'Eritrean nakfa',
+    flag: '🇪🇷',
+    nameEn: 'Eritrea',
+    nameLocal: 'ኤርትራ, إرتريا, Eritrea',
+    region: 'Africa',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '34',
+    code: 'ES',
+    currencyCode: 'EUR',
+    currencyNameEn: 'Euro',
+    flag: '🇪🇸',
+    nameEn: 'Spain',
+    nameLocal: 'España',
+    region: 'Europe',
+    tinName:
+      'Número de Identificación Fiscal (formerly named Código de Identificación Fiscal)',
+    tinType: 'NIF (CIF)'
+  },
+  {
+    callingCode: '251',
+    code: 'ET',
+    currencyCode: 'ETB',
+    currencyNameEn: 'Ethiopian birr',
+    flag: '🇪🇹',
+    nameEn: 'Ethiopia',
+    nameLocal: 'ኢትዮጵያ, Itoophiyaa',
+
+    region: 'Africa',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '358',
+    code: 'FI',
+    currencyCode: 'EUR',
+    currencyNameEn: 'Euro',
+    flag: '🇫🇮',
+    nameEn: 'Finland',
+    nameLocal: 'Suomi',
+    region: 'Europe',
+    tinName: 'Arvonlisäveronumero',
+    tinType: 'ALV nro'
+  },
+  {
+    callingCode: '679',
+    code: 'FJ',
+    currencyCode: 'FJD',
+    currencyNameEn: 'Fiji dollar',
+    flag: '🇫🇯',
+    nameEn: 'Fiji',
+    nameLocal: 'Fiji',
+    region: 'Asia & Pacific',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '691',
+    code: 'FM',
+    currencyCode: 'USD',
+    currencyNameEn: 'United States dollar',
+    flag: '🇫🇲',
+    nameEn: 'Micronesia (Federated States of)',
+    nameLocal: 'Micronesia',
+    region: 'Asia & Pacific',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '33',
+    code: 'FR',
+    currencyCode: 'EUR',
+    currencyNameEn: 'Euro',
+    flag: '🇫🇷',
+    nameEn: 'France',
+    nameLocal: 'France',
+
+    region: 'Europe',
+    tinName:
+      "Numéro d'identification à la taxe sur la valeur ajoutée / Numéro de TVA intracommunautaire",
+    tinType: 'n° TVA'
+  },
+  {
+    callingCode: '241',
+    code: 'GA',
+    currencyCode: 'XAF',
+    currencyNameEn: 'CFA franc BEAC',
+    flag: '🇬🇦',
+    nameEn: 'Gabon',
+    nameLocal: 'Gabon',
+
+    region: 'Africa',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '1473',
+    code: 'GD',
+    currencyCode: 'XCD',
+    currencyNameEn: 'East Caribbean dollar',
+    flag: '🇬🇩',
+    nameEn: 'Grenada',
+    nameLocal: 'Grenada',
+    region: 'South/Latin America',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '995',
+    code: 'GE',
+    currencyCode: 'GEL',
+    currencyNameEn: 'Georgian lari',
+    flag: '🇬🇪',
+    nameEn: 'Georgia',
+    nameLocal: 'საქართველო',
+    region: 'Europe',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '594',
+    code: 'GF',
+    currencyCode: 'EUR',
+    currencyNameEn: 'Euro',
+    flag: '🇬🇫',
+    nameEn: 'French Guiana',
+    nameLocal: 'Guyane française',
+
+    region: 'South/Latin America',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '44',
+    code: 'GG',
+    currencyCode: 'GBP',
+    currencyNameEn: 'Pound sterling',
+    flag: '🇬🇬',
+    nameEn: 'Guernsey',
+    nameLocal: 'Guernsey',
+    region: 'Europe',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '233',
+    code: 'GH',
+    currencyCode: 'GHS',
+    currencyNameEn: 'Ghanaian cedi',
+    flag: '🇬🇭',
+    nameEn: 'Ghana',
+    nameLocal: 'Ghana',
+    region: 'Africa',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '350',
+    code: 'GI',
+    currencyCode: 'GIP',
+    currencyNameEn: 'Gibraltar pound',
+    flag: '🇬🇮',
+    nameEn: 'Gibraltar',
+    nameLocal: 'Gibraltar',
+    region: 'Europe',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '299',
+    code: 'GL',
+    currencyCode: 'DKK',
+    currencyNameEn: 'Danish krone',
+    flag: '🇬🇱',
+    nameEn: 'Greenland',
+    nameLocal: 'Kalaallit Nunaat, Grønland',
+    region: 'Europe',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '224',
+    code: 'GN',
+    currencyCode: 'GNF',
+    currencyNameEn: 'Guinean franc',
+    flag: '🇬🇳',
+    nameEn: 'Guinea',
+    nameLocal: 'Guinée',
+
+    region: 'Africa',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '590',
+    code: 'GP',
+    currencyCode: 'EUR',
+    currencyNameEn: 'Euro',
+    flag: '🇬🇵',
+    nameEn: 'Guadeloupe',
+    nameLocal: 'Guadeloupe',
+
+    region: 'South/Latin America',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '240',
+    code: 'GQ',
+    currencyCode: 'XAF',
+    currencyNameEn: 'CFA franc BEAC',
+    flag: '🇬🇶',
+    nameEn: 'Equatorial Guinea',
+    nameLocal: 'Guiena ecuatorial, Guinée équatoriale, Guiné Equatorial',
+
+    region: 'Africa',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '30',
+    code: 'GR',
+    currencyCode: 'EUR',
+    currencyNameEn: 'Euro',
+    flag: '🇬🇷',
+    nameEn: 'Greece',
+    nameLocal: 'Ελλάδα',
+
+    region: 'Europe',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '500',
+    code: 'GS',
+    currencyCode: '',
+    currencyNameEn: '',
+    flag: '🇬🇸',
+    nameEn: 'South Georgia and the South Sandwich Islands',
+    nameLocal: 'South Georgia and the South Sandwich Islands',
+    region: 'South/Latin America',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '502',
+    code: 'GT',
+    currencyCode: 'GTQ',
+    currencyNameEn: 'Guatemalan quetzal',
+    flag: '🇬🇹',
+    nameEn: 'Guatemala',
+    nameLocal: 'Guatemala',
+
+    region: 'South/Latin America',
+    tinName: 'Número de Identificación Tributaria',
+    tinType: 'NIT'
+  },
+  {
+    callingCode: '1',
+    code: 'GU',
+    currencyCode: 'USD',
+    currencyNameEn: 'United States dollar',
+    flag: '🇬🇺',
+    nameEn: 'Guam',
+    nameLocal: 'Guam, Guåhån',
+    region: 'Asia & Pacific',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '245',
+    code: 'GW',
+    currencyCode: 'XOF',
+    currencyNameEn: 'CFA franc BCEAO',
+    flag: '🇬🇼',
+    nameEn: 'Guinea-Bissau',
+    nameLocal: 'Guiné-Bissau',
+
+    region: 'Africa',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '592',
+    code: 'GY',
+    currencyCode: 'GYD',
+    currencyNameEn: 'Guyanese dollar',
+    flag: '🇬🇾',
+    nameEn: 'Guyana',
+    nameLocal: 'Guyana',
+    region: 'South/Latin America',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '852',
+    code: 'HK',
+    currencyCode: 'HKD',
+    currencyNameEn: 'Hong Kong dollar',
+    flag: '🇭🇰',
+    nameEn: 'Hong Kong',
+    nameLocal: '香港, Hong Kong',
+    region: 'Asia & Pacific',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '504',
+    code: 'HN',
+    currencyCode: 'HNL',
+    currencyNameEn: 'Honduran lempira',
+    flag: '🇭🇳',
+    nameEn: 'Honduras',
+    nameLocal: 'Honduras',
+
+    region: 'South/Latin America',
+    tinName: 'Registro Tributario Nacional',
+    tinType: 'RTN'
+  },
+  {
+    callingCode: '385',
+    code: 'HR',
+    currencyCode: 'HRK',
+    currencyNameEn: 'Croatian kuna',
+    flag: '🇭🇷',
+    nameEn: 'Croatia',
+    nameLocal: 'Hrvatska',
+    region: 'Europe',
+    tinName: 'PDV Id. Broj OIB',
+    tinType: 'PDV-ID; OIB'
+  },
+  {
+    callingCode: '509',
+    code: 'HT',
+    currencyCode: 'HTG',
+    currencyNameEn: 'Haitian gourde',
+    flag: '🇭🇹',
+    nameEn: 'Haiti',
+    nameLocal: 'Haïti, Ayiti',
+
+    region: 'South/Latin America',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '36',
+    code: 'HU',
+    currencyCode: 'HUF',
+    currencyNameEn: 'Hungarian forint',
+    flag: '🇭🇺',
+    nameEn: 'Hungary',
+    nameLocal: 'Magyarország',
+    region: 'Europe',
+    tinName: 'Közösségi adószám',
+    tinType: 'ANUM'
+  },
+  {
+    callingCode: '62',
+    code: 'ID',
+    currencyCode: 'IDR',
+    currencyNameEn: 'Indonesian rupiah',
+    flag: '🇮🇩',
+    nameEn: 'Indonesia',
+    nameLocal: 'Indonesia',
+    region: 'Asia & Pacific',
+    tinName: 'Nomor Pokok Wajib Pajak',
+    tinType: 'NPWP'
+  },
+  {
+    callingCode: '353',
+    code: 'IE',
+    currencyCode: 'EUR',
+    currencyNameEn: 'Euro',
+    flag: '🇮🇪',
+    nameEn: 'Ireland',
+    nameLocal: 'Ireland, Éire',
+    region: 'Europe',
+    tinName: 'Value added tax identification no.',
+    tinType: 'VAT or CBL'
+  },
+  {
+    callingCode: '972',
+    code: 'IL',
+    currencyCode: 'ILS',
+    currencyNameEn: 'Israeli new shekel',
+    flag: '🇮🇱',
+    nameEn: 'Israel',
+    nameLocal: 'ישראל',
+    region: 'Europe',
+    tinName: 'מס\' עוסק מורשה / ח"פ',
+    tinType: ''
+  },
+  {
+    callingCode: '44',
+    code: 'IM',
+    currencyCode: 'GBP',
+    currencyNameEn: 'Pound sterling',
+    flag: '🇮🇲',
+    nameEn: 'Isle of Man',
+    nameLocal: 'Isle of Man',
+    region: 'Europe',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '91',
+    code: 'IN',
+    currencyCode: 'INR',
+    currencyNameEn: 'Indian rupee',
+    flag: '🇮🇳',
+    nameEn: 'India',
+    nameLocal: 'भारत, India',
+    region: 'Asia & Pacific',
+    tinName:
+      'Value Added Tax - Taxpayer Identification Number / Central Sales Tax - Taxpayer Identification Number (In most states)Not applicable',
+    tinType: 'VAT TIN / CST TIN'
+  },
+  {
+    callingCode: '964',
+    code: 'IQ',
+    currencyCode: 'IQD',
+    currencyNameEn: 'Iraqi dinar',
+    flag: '🇮🇶',
+    nameEn: 'Iraq',
+    nameLocal: 'العراق, Iraq',
+
+    region: 'Arab States',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '98',
+    code: 'IR',
+    currencyCode: 'IRR',
+    currencyNameEn: 'Iranian rial',
+    flag: '🇮🇷',
+    nameEn: 'Iran (Islamic Republic of)',
+    nameLocal: 'ایران',
+    region: 'Asia & Pacific',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '354',
+    code: 'IS',
+    currencyCode: 'ISK',
+    currencyNameEn: 'Icelandic króna',
+    flag: '🇮🇸',
+    nameEn: 'Iceland',
+    nameLocal: 'Ísland',
+    region: 'Europe',
+    tinName: 'Virðisaukaskattsnúmer',
+    tinType: 'VSK / VASK'
+  },
+  {
+    callingCode: '39',
+    code: 'IT',
+    currencyCode: 'EUR',
+    currencyNameEn: 'Euro',
+    flag: '🇮🇹',
+    nameEn: 'Italy',
+    nameLocal: 'Italia',
+
+    region: 'Europe',
+    tinName: 'Partita IVA(IVA = Imposta sul Valore Aggiunto)',
+    tinType: 'P.IVA'
+  },
+  {
+    callingCode: '44',
+    code: 'JE',
+    currencyCode: 'GBP',
+    currencyNameEn: 'Pound sterling',
+    flag: '🇯🇪',
+    nameEn: 'Jersey',
+    nameLocal: 'Jersey',
+    region: 'Europe',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '876',
+    code: 'JM',
+    currencyCode: 'JMD',
+    currencyNameEn: 'Jamaican dollar',
+    flag: '🇯🇲',
+    nameEn: 'Jamaica',
+    nameLocal: 'Jamaica',
+    region: 'South/Latin America',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '962',
+    code: 'JO',
+    currencyCode: 'JOD',
+    currencyNameEn: 'Jordanian dinar',
+    flag: '🇯🇴',
+    nameEn: 'Jordan',
+    nameLocal: 'الأُرْدُن',
+
+    region: 'Arab States',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '81',
+    code: 'JP',
+    currencyCode: 'JPY',
+    currencyNameEn: 'Japanese yen',
+    flag: '🇯🇵',
+    nameEn: 'Japan',
+    nameLocal: '日本',
+    region: 'Asia & Pacific',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '254',
+    code: 'KE',
+    currencyCode: 'KES',
+    currencyNameEn: 'Kenyan shilling',
+    flag: '🇰🇪',
+    nameEn: 'Kenya',
+    nameLocal: 'Kenya',
+    region: 'Africa',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '996',
+    code: 'KG',
+    currencyCode: 'KGS',
+    currencyNameEn: 'Kyrgyzstani som',
+    flag: '🇰🇬',
+    nameEn: 'Kyrgyzstan',
+    nameLocal: 'Кыргызстан, Киргизия',
+    region: 'Asia & Pacific',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '855',
+    code: 'KH',
+    currencyCode: 'KHR',
+    currencyNameEn: 'Cambodian riel',
+    flag: '🇰🇭',
+    nameEn: 'Cambodia',
+    nameLocal: 'កម្ពុជា',
+    region: 'Asia & Pacific',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '850',
+    code: 'KP',
+    currencyCode: 'KPW',
+    currencyNameEn: 'North Korean won',
+    flag: '🇰🇵',
+    nameEn: 'North Korea',
+    nameLocal: '조선민주주의인민공화국',
+    region: 'Asia',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '82',
+    code: 'KR',
+    currencyCode: 'KRW',
+    currencyNameEn: 'South Korean won',
+    flag: '🇰🇷',
+    nameEn: 'South Korea',
+    nameLocal: '대한민국',
+    region: 'Asia',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '686',
+    code: 'KI',
+    currencyCode: 'AUD',
+    currencyNameEn: 'Australian dollar',
+    flag: '🇰🇮',
+    nameEn: 'Kiribati',
+    nameLocal: 'Kiribati',
+    region: 'Asia & Pacific',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '1869',
+    code: 'KN',
+    currencyCode: 'XCD',
+    currencyNameEn: 'East Caribbean dollar',
+    flag: '🇰🇳',
+    nameEn: 'Saint Kitts and Nevis',
+    nameLocal: 'Saint Kitts and Nevis',
+    region: 'South/Latin America',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '965',
+    code: 'KW',
+    currencyCode: 'KWD',
+    currencyNameEn: 'Kuwaiti dinar',
+    flag: '🇰🇼',
+    nameEn: 'Kuwait',
+    nameLocal: 'الكويت',
+
+    region: 'Arab States',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '7',
+    code: 'KZ',
+    currencyCode: 'KZT',
+    currencyNameEn: 'Kazakhstani tenge',
+    flag: '🇰🇿',
+    nameEn: 'Kazakhstan',
+    nameLocal: 'Қазақстан, Казахстан',
+    region: 'Asia & Pacific',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '961',
+    code: 'LB',
+    currencyCode: 'LBP',
+    currencyNameEn: 'Lebanese pound',
+    flag: '🇱🇧',
+    nameEn: 'Lebanon',
+    nameLocal: 'لبنان, Liban',
+
+    region: 'Arab States',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '1758',
+    code: 'LC',
+    currencyCode: 'XCD',
+    currencyNameEn: 'East Caribbean dollar',
+    flag: '🇱🇨',
+    nameEn: 'Saint Lucia',
+    nameLocal: 'Saint Lucia',
+    region: 'South/Latin America',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '423',
+    code: 'LI',
+    currencyCode: 'CHF',
+    currencyNameEn: 'Swiss franc',
+    flag: '🇱🇮',
+    nameEn: 'Liechtenstein',
+    nameLocal: 'Liechtenstein',
+
+    region: 'Europe',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '94',
+    code: 'LK',
+    currencyCode: 'LKR',
+    currencyNameEn: 'Sri Lankan rupee',
+    flag: '🇱🇰',
+    nameEn: 'Sri Lanka',
+    nameLocal: 'ශ්‍රී ලංකා, இலங்கை',
+    region: 'Asia & Pacific',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '231',
+    code: 'LR',
+    currencyCode: 'LRD',
+    currencyNameEn: 'Liberian dollar',
+    flag: '🇱🇷',
+    nameEn: 'Liberia',
+    nameLocal: 'Liberia',
+    region: 'Africa',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '266',
+    code: 'LS',
+    currencyCode: 'LSL',
+    currencyNameEn: 'Lesotho loti',
+    flag: '🇱🇸',
+    nameEn: 'Lesotho',
+    nameLocal: 'Lesotho',
+    region: 'Africa',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '370',
+    code: 'LT',
+    currencyCode: 'EUR',
+    currencyNameEn: 'Euro',
+    flag: '🇱🇹',
+    nameEn: 'Lithuania',
+    nameLocal: 'Lietuva',
+    region: 'Europe',
+    tinName: 'PVM (abbrev. Pridėtinės vertės mokestis) mokėtojo kodas',
+    tinType: 'PVM kodas'
+  },
+  {
+    callingCode: '352',
+    code: 'LU',
+    currencyCode: 'EUR',
+    currencyNameEn: 'Euro',
+    flag: '🇱🇺',
+    nameEn: 'Luxembourg',
+    nameLocal: 'Lëtzebuerg, Luxembourg, Luxemburg',
+    region: 'Europe',
+    tinName: "Numéro d'identification à la taxe sur la valeur ajoutée",
+    tinType: 'No. TVA'
+  },
+  {
+    callingCode: '371',
+    code: 'LV',
+    currencyCode: 'EUR',
+    currencyNameEn: 'Euro',
+    flag: '🇱🇻',
+    nameEn: 'Latvia',
+    nameLocal: 'Latvija',
+    region: 'Europe',
+    tinName: 'Pievienotās vērtības nodokļa (PVN) reģistrācijas numurs',
+    tinType: 'PVN'
+  },
+  {
+    callingCode: '218',
+    code: 'LY',
+    currencyCode: 'LYD',
+    currencyNameEn: 'Libyan dinar',
+    flag: '🇱🇾',
+    nameEn: 'Libya',
+    nameLocal: 'ليبيا',
+
+    region: 'Arab States',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '212',
+    code: 'MA',
+    currencyCode: 'MAD',
+    currencyNameEn: 'Moroccan dirham',
+    flag: '🇲🇦',
+    nameEn: 'Morocco',
+    nameLocal: 'Maroc, ⵍⵎⵖⵔⵉⴱ, المغرب',
+
+    region: 'Arab States',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '377',
+    code: 'MC',
+    currencyCode: 'EUR',
+    currencyNameEn: 'Euro',
+    flag: '🇲🇨',
+    nameEn: 'Monaco',
+    nameLocal: 'Monaco',
+
+    region: 'Europe',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '382',
+    code: 'ME',
+    currencyCode: 'EUR',
+    currencyNameEn: 'Euro',
+    flag: '🇲🇪',
+    nameEn: 'Montenegro',
+    nameLocal: 'Crna Gora, Црна Гора',
+    region: 'Europe',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '590',
+    code: 'MF',
+    currencyCode: 'EUR',
+    currencyNameEn: 'Euro',
+    flag: '🇲🇫',
+    nameEn: 'Saint Martin (French part)',
+    nameLocal: 'Saint-Martin',
+
+    region: 'South/Latin America',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '261',
+    code: 'MG',
+    currencyCode: 'MGA',
+    currencyNameEn: 'Malagasy ariary',
+    flag: '🇲🇬',
+    nameEn: 'Madagascar',
+    nameLocal: 'Madagasikara, Madagascar',
+    region: 'Africa',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '223',
+    code: 'ML',
+    currencyCode: 'XOF',
+    currencyNameEn: 'CFA franc BCEAO',
+    flag: '🇲🇱',
+    nameEn: 'Mali',
+    nameLocal: 'Mali',
+
+    region: 'Africa',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '95',
+    code: 'MM',
+    currencyCode: 'MMK',
+    currencyNameEn: 'Myanmar kyat',
+    flag: '🇲🇲',
+    nameEn: 'Myanmar',
+    nameLocal: 'မြန်မာ',
+    region: 'Asia & Pacific',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '976',
+    code: 'MN',
+    currencyCode: 'MNT',
+    currencyNameEn: 'Mongolian tögrög',
+    flag: '🇲🇳',
+    nameEn: 'Mongolia',
+    nameLocal: 'Монгол Улс',
+    region: 'Asia & Pacific',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '853',
+    code: 'MO',
+    currencyCode: 'MOP',
+    currencyNameEn: 'Macanese pataca',
+    flag: '🇲🇴',
+    nameEn: 'Macao',
+    nameLocal: '澳門, Macau',
+    region: 'Asia & Pacific',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '596',
+    code: 'MQ',
+    currencyCode: 'EUR',
+    currencyNameEn: 'Euro',
+    flag: '🇲🇶',
+    nameEn: 'Martinique',
+    nameLocal: 'Martinique',
+
+    region: 'South/Latin America',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '222',
+    code: 'MR',
+    currencyCode: 'MRU',
+    currencyNameEn: '',
+    flag: '🇲🇷',
+    nameEn: 'Mauritania',
+    nameLocal: 'موريتانيا, Mauritanie',
+
+    region: 'Arab States',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '1664',
+    code: 'MS',
+    currencyCode: 'XCD',
+    currencyNameEn: 'East Caribbean dollar',
+    flag: '🇲🇸',
+    nameEn: 'Montserrat',
+    nameLocal: 'Montserrat',
+    region: 'South/Latin America',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '356',
+    code: 'MT',
+    currencyCode: 'EUR',
+    currencyNameEn: 'Euro',
+    flag: '🇲🇹',
+    nameEn: 'Malta',
+    nameLocal: 'Malta',
+    region: 'Europe',
+    tinName: 'Vat reg. no.',
+    tinType: 'Vat No.'
+  },
+  {
+    callingCode: '230',
+    code: 'MU',
+    currencyCode: 'MUR',
+    currencyNameEn: 'Mauritian rupee',
+    flag: '🇲🇺',
+    nameEn: 'Mauritius',
+    nameLocal: 'Maurice, Mauritius',
+    region: 'Africa',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '960',
+    code: 'MV',
+    currencyCode: 'MVR',
+    currencyNameEn: 'Maldivian rufiyaa',
+    flag: '🇲🇻',
+    nameEn: 'Maldives',
+    nameLocal: '',
+    region: 'Asia & Pacific',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '265',
+    code: 'MW',
+    currencyCode: 'MWK',
+    currencyNameEn: 'Malawian kwacha',
+    flag: '🇲🇼',
+    nameEn: 'Malawi',
+    nameLocal: 'Malawi',
+    region: 'Africa',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '52',
+    code: 'MX',
+    currencyCode: 'MXN',
+    currencyNameEn: 'Mexican peso',
+    flag: '🇲🇽',
+    nameEn: 'Mexico',
+    nameLocal: 'México',
+
+    region: 'South/Latin America',
+    tinName: 'Registro Federal de Contribuyentes',
+    tinType: 'RFC'
+  },
+  {
+    callingCode: '60',
+    code: 'MY',
+    currencyCode: 'MYR',
+    currencyNameEn: 'Malaysian ringgit',
+    flag: '🇲🇾',
+    nameEn: 'Malaysia',
+    nameLocal: '',
+    region: 'Asia & Pacific',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '258',
+    code: 'MZ',
+    currencyCode: 'MZN',
+    currencyNameEn: 'Mozambican metical',
+    flag: '🇲🇿',
+    nameEn: 'Mozambique',
+    nameLocal: 'Mozambique',
+
+    region: 'Africa',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '264',
+    code: 'NA',
+    currencyCode: 'NAD',
+    currencyNameEn: 'Namibian dollar',
+    flag: '🇳🇦',
+    nameEn: 'Namibia',
+    nameLocal: 'Namibia',
+    region: 'Africa',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '687',
+    code: 'NC',
+    currencyCode: 'XPF',
+    currencyNameEn: 'CFP franc (franc Pacifique)',
+    flag: '🇳🇨',
+    nameEn: 'New Caledonia',
+    nameLocal: 'Nouvelle-Calédonie',
+
+    region: 'Asia & Pacific',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '672',
+    code: 'NF',
+    currencyCode: 'AUD',
+    currencyNameEn: 'Australian dollar',
+    flag: '🇳🇫',
+    nameEn: 'Norfolk Island',
+    nameLocal: 'Norfolk Island',
+    region: 'Asia & Pacific',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '234',
+    code: 'NG',
+    currencyCode: 'NGN',
+    currencyNameEn: 'Nigerian naira',
+    flag: '🇳🇬',
+    nameEn: 'Nigeria',
+    nameLocal: 'Nigeria',
+    region: 'Africa',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '505',
+    code: 'NI',
+    currencyCode: 'NIO',
+    currencyNameEn: 'Nicaraguan córdoba',
+    flag: '🇳🇮',
+    nameEn: 'Nicaragua',
+    nameLocal: 'Nicaragua',
+
+    region: 'South/Latin America',
+    tinName: 'Registro Unico de Contribuyentes',
+    tinType: 'RUC'
+  },
+  {
+    callingCode: '47',
+    code: 'NO',
+    currencyCode: 'NOK',
+    currencyNameEn: 'Norwegian krone',
+    flag: '🇳🇴',
+    nameEn: 'Norway',
+    nameLocal: 'Norge, Noreg',
+    region: 'Europe',
+    tinName: 'Organisasjonsnummer',
+    tinType: 'Orgnr'
+  },
+  {
+    callingCode: '977',
+    code: 'NP',
+    currencyCode: 'NPR',
+    currencyNameEn: 'Nepalese rupee',
+    flag: '🇳🇵',
+    nameEn: 'Nepal',
+    nameLocal: '',
+    region: 'Asia & Pacific',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '674',
+    code: 'NR',
+    currencyCode: 'AUD',
+    currencyNameEn: 'Australian dollar',
+    flag: '🇳🇷',
+    nameEn: 'Nauru',
+    nameLocal: 'Nauru',
+    region: 'Asia & Pacific',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '683',
+    code: 'NU',
+    currencyCode: 'NZD',
+    currencyNameEn: 'New Zealand dollar',
+    flag: '🇳🇺',
+    nameEn: 'Niue',
+    nameLocal: 'Niue',
+    region: 'Asia & Pacific',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '64',
+    code: 'NZ',
+    currencyCode: 'NZD',
+    currencyNameEn: 'New Zealand dollar',
+    flag: '🇳🇿',
+    nameEn: 'New Zealand',
+    nameLocal: 'New Zealand',
+    region: 'Asia & Pacific',
+    tinName: 'NZ Business Number',
+    tinType: 'NZBN'
+  },
+  {
+    callingCode: '968',
+    code: 'OM',
+    currencyCode: 'OMR',
+    currencyNameEn: 'Omani rial',
+    flag: '🇴🇲',
+    nameEn: 'Oman',
+    nameLocal: 'سلطنة عُمان',
+
+    region: 'Arab States',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '507',
+    code: 'PA',
+    currencyCode: 'PAB',
+    currencyNameEn: 'Panamanian balboa',
+    flag: '🇵🇦',
+    nameEn: 'Panama',
+    nameLocal: 'Panama',
+
+    region: 'South/Latin America',
+    tinName: 'Registro Unico de Contribuyentes',
+    tinType: 'RUC'
+  },
+  {
+    callingCode: '51',
+    code: 'PE',
+    currencyCode: 'PEN',
+    currencyNameEn: 'Peruvian sol',
+    flag: '🇵🇪',
+    nameEn: 'Peru',
+    nameLocal: 'Perú',
+
+    region: 'South/Latin America',
+    tinName: 'Registro Unico de Contribuyentes',
+    tinType: 'RUC'
+  },
+  {
+    callingCode: '689',
+    code: 'PF',
+    currencyCode: 'XPF',
+    currencyNameEn: 'CFP franc (franc Pacifique)',
+    flag: '🇵🇫',
+    nameEn: 'French Polynesia',
+    nameLocal: 'Polynésie française',
+
+    region: 'Asia & Pacific',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '675',
+    code: 'PG',
+    currencyCode: 'PGK',
+    currencyNameEn: 'Papua New Guinean kina',
+    flag: '🇵🇬',
+    nameEn: 'Papua New Guinea',
+    nameLocal: 'Papua New Guinea',
+    region: 'Asia & Pacific',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '92',
+    code: 'PK',
+    currencyCode: 'PKR',
+    currencyNameEn: 'Pakistani rupee',
+    flag: '🇵🇰',
+    nameEn: 'Pakistan',
+    nameLocal: 'پاکستان',
+    region: 'Asia & Pacific',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '48',
+    code: 'PL',
+    currencyCode: 'PLN',
+    currencyNameEn: 'Polish złoty',
+    flag: '🇵🇱',
+    nameEn: 'Poland',
+    nameLocal: 'Polska',
+    region: 'Europe',
+    tinName: 'numer identyfikacji podatkowej',
+    tinType: 'NIP'
+  },
+  {
+    callingCode: '508',
+    code: 'PM',
+    currencyCode: 'EUR',
+    currencyNameEn: 'Euro',
+    flag: '🇵🇲',
+    nameEn: 'Saint Pierre and Miquelon',
+    nameLocal: 'Saint-Pierre-et-Miquelon',
+
+    region: 'North America',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '64',
+    code: 'PN',
+    currencyCode: 'NZD',
+    currencyNameEn: 'New Zealand dollar',
+    flag: '🇵🇳',
+    nameEn: 'Pitcairn',
+    nameLocal: 'Pitcairn',
+    region: 'Asia & Pacific',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '1',
+    code: 'PR',
+    currencyCode: 'USD',
+    currencyNameEn: 'United States dollar',
+    flag: '🇵🇷',
+    nameEn: 'Puerto Rico',
+    nameLocal: 'Puerto Rico',
+
+    region: 'South/Latin America',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '970',
+    code: 'PS',
+    currencyCode: '',
+    currencyNameEn: '',
+    flag: '🇵🇸',
+    nameEn: 'Palestine, State of',
+    nameLocal: 'Palestinian Territory',
+
+    region: 'Arab States',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '351',
+    code: 'PT',
+    currencyCode: 'EUR',
+    currencyNameEn: 'Euro',
+    flag: '🇵🇹',
+    nameEn: 'Portugal',
+    nameLocal: 'Portugal',
+
+    region: 'Europe',
+    tinName: 'Número de Identificação de Pessoa Coletiva (NIPC)',
+    tinType: 'NIPC'
+  },
+  {
+    callingCode: '680',
+    code: 'PW',
+    currencyCode: 'USD',
+    currencyNameEn: 'United States dollar',
+    flag: '🇵🇼',
+    nameEn: 'Palau',
+    nameLocal: 'Palau',
+    region: 'Asia & Pacific',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '595',
+    code: 'PY',
+    currencyCode: 'PYG',
+    currencyNameEn: 'Paraguayan guaraní',
+    flag: '🇵🇾',
+    nameEn: 'Paraguay',
+    nameLocal: 'Paraguay',
+
+    region: 'South/Latin America',
+    tinName: 'Registro Unico de Contribuyentes',
+    tinType: 'RUC'
+  },
+  {
+    callingCode: '974',
+    code: 'QA',
+    currencyCode: 'QAR',
+    currencyNameEn: 'Qatari riyal',
+    flag: '🇶🇦',
+    nameEn: 'Qatar',
+    nameLocal: 'قطر',
+
+    region: 'Arab States',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '262',
+    code: 'RE',
+    currencyCode: 'EUR',
+    currencyNameEn: 'Euro',
+    flag: '🇷🇪',
+    nameEn: 'Réunion',
+    nameLocal: 'La Réunion',
+
+    region: 'Asia & Pacific',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '40',
+    code: 'RO',
+    currencyCode: 'RON',
+    currencyNameEn: 'Romanian leu',
+    flag: '🇷🇴',
+    nameEn: 'Romania',
+    nameLocal: 'România',
+    region: 'Europe',
+    tinName: 'Codul de identificare fiscală',
+    tinType: 'CIF'
+  },
+  {
+    callingCode: '381',
+    code: 'RS',
+    currencyCode: 'RSD',
+    currencyNameEn: 'Serbian dinar',
+    flag: '🇷🇸',
+    nameEn: 'Serbia',
+    nameLocal: 'Србија',
+    region: 'Europe',
+    tinName: 'Poreski identifikacioni broj',
+    tinType: 'PIB'
+  },
+  {
+    callingCode: '7',
+    code: 'RU',
+    currencyCode: 'RUB',
+    currencyNameEn: 'Russian ruble',
+    flag: '🇷🇺',
+    nameEn: 'Russia',
+    nameLocal: 'Россия',
+    region: 'Europe',
+    tinName: 'Идентификационный номер налогоплательщика',
+    tinType: 'ИНН'
+  },
+  {
+    callingCode: '250',
+    code: 'RW',
+    currencyCode: 'RWF',
+    currencyNameEn: 'Rwandan franc',
+    flag: '🇷🇼',
+    nameEn: 'Rwanda',
+    nameLocal: 'Rwanda',
+    region: 'Africa',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '966',
+    code: 'SA',
+    currencyCode: 'SAR',
+    currencyNameEn: 'Saudi riyal',
+    flag: '🇸🇦',
+    nameEn: 'Saudi Arabia',
+    nameLocal: 'السعودية',
+
+    region: 'Arab States',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '677',
+    code: 'SB',
+    currencyCode: 'SBD',
+    currencyNameEn: 'Solomon Islands dollar',
+    flag: '🇸🇧',
+    nameEn: 'Solomon Islands',
+    nameLocal: 'Solomon Islands',
+    region: 'Asia & Pacific',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '248',
+    code: 'SC',
+    currencyCode: 'SCR',
+    currencyNameEn: 'Seychelles rupee',
+    flag: '🇸🇨',
+    nameEn: 'Seychelles',
+    nameLocal: 'Seychelles',
+
+    region: 'Africa',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '46',
+    code: 'SE',
+    currencyCode: 'SEK',
+    currencyNameEn: 'Swedish krona/kronor',
+    flag: '🇸🇪',
+    nameEn: 'Sweden',
+    nameLocal: 'Sverige',
+    region: 'Europe',
+    tinName: 'VAT-nummer',
+    tinType: 'Momsnr.'
+  },
+  {
+    callingCode: '65',
+    code: 'SG',
+    currencyCode: 'SGD',
+    currencyNameEn: 'Singapore dollar',
+    flag: '🇸🇬',
+    nameEn: 'Singapore',
+    nameLocal: 'Singapore',
+
+    region: 'Asia & Pacific',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '290',
+    code: 'SH',
+    currencyCode: 'SHP',
+    currencyNameEn: 'Saint Helena pound',
+    flag: '🇸🇭',
+    nameEn: 'Saint Helena, Ascension and Tristan da Cunha',
+    nameLocal: 'Saint Helena',
+    region: 'Africa',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '386',
+    code: 'SI',
+    currencyCode: 'EUR',
+    currencyNameEn: 'Euro',
+    flag: '🇸🇮',
+    nameEn: 'Slovenia',
+    nameLocal: 'Slovenija',
+    region: 'Europe',
+    tinName: 'Davčna številka',
+    tinType: 'ID za DDV'
+  },
+  {
+    callingCode: '4779',
+    code: 'SJ',
+    currencyCode: 'NOK',
+    currencyNameEn: 'Norwegian krone',
+    flag: '🇸🇯',
+    nameEn: 'Svalbard and Jan Mayen',
+    nameLocal: 'Svalbard and Jan Mayen',
+    region: 'Europe',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '421',
+    code: 'SK',
+    currencyCode: 'EUR',
+    currencyNameEn: 'Euro',
+    flag: '🇸🇰',
+    nameEn: 'Slovakia',
+    nameLocal: 'Slovensko',
+    region: 'Europe',
+    tinName: 'Identifikačné číslo pre daň z pridanej hodnoty',
+    tinType: 'IČ DPH'
+  },
+  {
+    callingCode: '232',
+    code: 'SL',
+    currencyCode: 'SLL',
+    currencyNameEn: 'Sierra Leonean leone',
+    flag: '🇸🇱',
+    nameEn: 'Sierra Leone',
+    nameLocal: 'Sierra Leone',
+    region: 'Africa',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '378',
+    code: 'SM',
+    currencyCode: 'EUR',
+    currencyNameEn: 'Euro',
+    flag: '🇸🇲',
+    nameEn: 'San Marino',
+    nameLocal: 'San Marino',
+
+    region: 'Europe',
+    tinName: 'Codice operatore economico',
+    tinType: 'C.O.E.'
+  },
+  {
+    callingCode: '221',
+    code: 'SN',
+    currencyCode: 'XOF',
+    currencyNameEn: 'CFA franc BCEAO',
+    flag: '🇸🇳',
+    nameEn: 'Senegal',
+    nameLocal: 'Sénégal',
+
+    region: 'Africa',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '252',
+    code: 'SO',
+    currencyCode: 'SOS',
+    currencyNameEn: 'Somali shilling',
+    flag: '🇸🇴',
+    nameEn: 'Somalia',
+    nameLocal: 'Somalia, الصومال',
+    region: 'Arab States',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '597',
+    code: 'SR',
+    currencyCode: 'SRD',
+    currencyNameEn: 'Surinamese dollar',
+    flag: '🇸🇷',
+    nameEn: 'Suriname',
+    nameLocal: 'Suriname',
+
+    region: 'South/Latin America',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '211',
+    code: 'SS',
+    currencyCode: 'SSP',
+    currencyNameEn: 'South Sudanese pound',
+    flag: '🇸🇸',
+    nameEn: 'South Sudan',
+    nameLocal: 'South Sudan',
+    region: 'Africa',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '239',
+    code: 'ST',
+    currencyCode: 'STN',
+    currencyNameEn: '',
+    flag: '🇸🇹',
+    nameEn: 'Sao Tome and Principe',
+    nameLocal: 'São Tomé e Príncipe',
+
+    region: 'Africa',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '503',
+    code: 'SV',
+    currencyCode: 'SVC',
+    currencyNameEn: 'Salvadoran colón',
+    flag: '🇸🇻',
+    nameEn: 'El Salvador',
+    nameLocal: 'El Salvador',
+
+    region: 'South/Latin America',
+    tinName: 'Número de Identificación Tributaria',
+    tinType: 'NIT'
+  },
+  {
+    callingCode: '1721',
+    code: 'SX',
+    currencyCode: 'ANG',
+    currencyNameEn: 'Netherlands Antillean guilder',
+    flag: '🇸🇽',
+    nameEn: 'Sint Maarten (Dutch part)',
+    nameLocal: 'Sint Maarten',
+
+    region: 'Unknown',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '963',
+    code: 'SY',
+    currencyCode: 'SYP',
+    currencyNameEn: 'Syrian pound',
+    flag: '🇸🇾',
+    nameEn: 'Syrian Arab Republic',
+    nameLocal: 'سوريا, Sūriyya',
+
+    region: 'Asia & Pacific',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '235',
+    code: 'TD',
+    currencyCode: 'XAF',
+    currencyNameEn: 'CFA franc BEAC',
+    flag: '🇹🇩',
+    nameEn: 'Chad',
+    nameLocal: 'Tchad, تشاد',
+
+    region: 'Africa',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '228',
+    code: 'TG',
+    currencyCode: 'XOF',
+    currencyNameEn: 'CFA franc BCEAO',
+    flag: '🇹🇬',
+    nameEn: 'Togo',
+    nameLocal: 'Togo',
+
+    region: 'Africa',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '66',
+    code: 'TH',
+    currencyCode: 'THB',
+    currencyNameEn: 'Thai baht',
+    flag: '🇹🇭',
+    nameEn: 'Thailand',
+    nameLocal: 'ประเทศไทย',
+    region: 'Asia & Pacific',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '992',
+    code: 'TJ',
+    currencyCode: 'TJS',
+    currencyNameEn: 'Tajikistani somoni',
+    flag: '🇹🇯',
+    nameEn: 'Tajikistan',
+    nameLocal: ',',
+    region: 'Asia & Pacific',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '690',
+    code: 'TK',
+    currencyCode: 'NZD',
+    currencyNameEn: 'New Zealand dollar',
+    flag: '🇹🇰',
+    nameEn: 'Tokelau',
+    nameLocal: 'Tokelau',
+    region: 'Asia & Pacific',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '670',
+    code: 'TL',
+    currencyCode: 'USD',
+    currencyNameEn: 'United States dollar',
+    flag: '🇹🇱',
+    nameEn: 'Timor-Leste',
+    nameLocal: "Timor-Leste, Timor Lorosa'e",
+
+    region: 'Asia & Pacific',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '993',
+    code: 'TM',
+    currencyCode: 'TMT',
+    currencyNameEn: 'Turkmenistan manat',
+    flag: '🇹🇲',
+    nameEn: 'Turkmenistan',
+    nameLocal: 'Türkmenistan',
+    region: 'Asia & Pacific',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '216',
+    code: 'TN',
+    currencyCode: 'TND',
+    currencyNameEn: 'Tunisian dinar',
+    flag: '🇹🇳',
+    nameEn: 'Tunisia',
+    nameLocal: 'تونس, Tunisie',
+
+    region: 'Arab States',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '676',
+    code: 'TO',
+    currencyCode: 'TOP',
+    currencyNameEn: 'Tongan paʻanga',
+    flag: '🇹🇴',
+    nameEn: 'Tonga',
+    nameLocal: 'Tonga',
+    region: 'Asia & Pacific',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '90',
+    code: 'TR',
+    currencyCode: 'TRY',
+    currencyNameEn: 'Turkish lira',
+    flag: '🇹🇷',
+    nameEn: 'Turkey',
+    nameLocal: 'Türkiye',
+    region: 'Europe',
+    tinName: 'Vergi Kimlik Numarası',
+    tinType: 'KDV'
+  },
+  {
+    callingCode: '868',
+    code: 'TT',
+    currencyCode: 'TTD',
+    currencyNameEn: 'Trinidad and Tobago dollar',
+    flag: '🇹🇹',
+    nameEn: 'Trinidad and Tobago',
+    nameLocal: 'Trinidad and Tobago',
+    region: 'South/Latin America',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '688',
+    code: 'TV',
+    currencyCode: 'AUD',
+    currencyNameEn: 'Australian dollar',
+    flag: '🇹🇻',
+    nameEn: 'Tuvalu',
+    nameLocal: 'Tuvalu',
+    region: 'Asia & Pacific',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '255',
+    code: 'TZ',
+    currencyCode: 'TZS',
+    currencyNameEn: 'Tanzanian shilling',
+    flag: '🇹🇿',
+    nameEn: 'United Republic of Tanzania',
+    nameLocal: 'Tanzania',
+    region: 'Africa',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '380',
+    code: 'UA',
+    currencyCode: 'UAH',
+    currencyNameEn: 'Ukrainian hryvnia',
+    flag: '🇺🇦',
+    nameEn: 'Ukraine',
+    nameLocal: 'Україна',
+    region: 'Europe',
+    tinName: 'Ідентифікаційний номер платника податків',
+    tinType: 'ІНПП'
+  },
+  {
+    callingCode: '256',
+    code: 'UG',
+    currencyCode: 'UGX',
+    currencyNameEn: 'Ugandan shilling',
+    flag: '🇺🇬',
+    nameEn: 'Uganda',
+    nameLocal: 'Uganda',
+    region: 'Africa',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '1',
+    code: 'US',
+    currencyCode: 'USD',
+    currencyNameEn: 'United States dollar',
+    flag: '🇺🇸',
+    nameEn: 'United States of America',
+    nameLocal: 'United States of America',
+    region: 'North America',
+    tinName: 'Tax Identification Number',
+    tinType: 'EIN'
+  },
+  {
+    callingCode: '598',
+    code: 'UY',
+    currencyCode: 'UYU',
+    currencyNameEn: 'Uruguayan peso',
+    flag: '🇺🇾',
+    nameEn: 'Uruguay',
+    nameLocal: 'Uruguay',
+
+    region: 'South/Latin America',
+    tinName: 'Registro Único Tributario',
+    tinType: 'RUT'
+  },
+  {
+    callingCode: '998',
+    code: 'UZ',
+    currencyCode: 'UZS',
+    currencyNameEn: 'Uzbekistan som',
+    flag: '🇺🇿',
+    nameEn: 'Uzbekistan',
+    nameLocal: '',
+    region: 'Asia & Pacific',
+    tinName: 'Солиқ тўловчиларнинг идентификация рақами',
+    tinType: 'СТИР'
+  },
+  {
+    callingCode: '1784',
+    code: 'VC',
+    currencyCode: 'XCD',
+    currencyNameEn: 'East Caribbean dollar',
+    flag: '🇻🇨',
+    nameEn: 'Saint Vincent and the Grenadines',
+    nameLocal: 'Saint Vincent and the Grenadines',
+    region: 'South/Latin America',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '58',
+    code: 'VE',
+    currencyCode: 'VES',
+    currencyNameEn: '',
+    flag: '🇻🇪',
+    nameEn: 'Venezuela (Bolivarian Republic of)',
+    nameLocal: 'Venezuela',
+
+    region: 'South/Latin America',
+    tinName: 'Registro de Informacion Fiscal',
+    tinType: 'RIF'
+  },
+  {
+    callingCode: '1284',
+    code: 'VG',
+    currencyCode: 'USD',
+    currencyNameEn: 'United States dollar',
+    flag: '🇻🇬',
+    nameEn: 'Virgin Islands (British)',
+    nameLocal: 'British Virgin Islands',
+    region: 'South/Latin America',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '1340',
+    code: 'VI',
+    currencyCode: 'USD',
+    currencyNameEn: 'United States dollar',
+    flag: '🇻🇮',
+    nameEn: 'Virgin Islands (U.S.)',
+    nameLocal: 'United States Virgin Islands',
+    region: 'South/Latin America',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '84',
+    code: 'VN',
+    currencyCode: 'VND',
+    currencyNameEn: 'Vietnamese đồng',
+    flag: '🇻🇳',
+    nameEn: 'Vietnam',
+    nameLocal: 'Việt Nam',
+    region: 'Asia & Pacific',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '678',
+    code: 'VU',
+    currencyCode: 'VUV',
+    currencyNameEn: 'Vanuatu vatu',
+    flag: '🇻🇺',
+    nameEn: 'Vanuatu',
+    nameLocal: 'Vanuatu',
+    region: 'Asia & Pacific',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '681',
+    code: 'WF',
+    currencyCode: 'XPF',
+    currencyNameEn: 'CFP franc (franc Pacifique)',
+    flag: '🇼🇫',
+    nameEn: 'Wallis and Futuna',
+    nameLocal: 'Wallis-et-Futuna',
+
+    region: 'Asia & Pacific',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '685',
+    code: 'WS',
+    currencyCode: 'WST',
+    currencyNameEn: 'Samoan tala',
+    flag: '🇼🇸',
+    nameEn: 'Samoa',
+    nameLocal: 'Samoa',
+    region: 'Asia & Pacific',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '967',
+    code: 'YE',
+    currencyCode: 'YER',
+    currencyNameEn: 'Yemeni rial',
+    flag: '🇾🇪',
+    nameEn: 'Yemen',
+    nameLocal: 'اليَمَن',
+
+    region: 'Arab States',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '262',
+    code: 'YT',
+    currencyCode: 'EUR',
+    currencyNameEn: 'Euro',
+    flag: '🇾🇹',
+    nameEn: 'Mayotte',
+    nameLocal: 'Mayotte',
+
+    region: 'Africa',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '27',
+    code: 'ZA',
+    currencyCode: 'ZAR',
+    currencyNameEn: 'South African rand',
+    flag: '🇿🇦',
+    nameEn: 'South Africa',
+    nameLocal: 'South Africa',
+    region: 'Africa',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '260',
+    code: 'ZM',
+    currencyCode: 'ZMW',
+    currencyNameEn: 'Zambian kwacha',
+    flag: '🇿🇲',
+    nameEn: 'Zambia',
+    nameLocal: 'Zambia',
+    region: 'Africa',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '263',
+    code: 'ZW',
+    currencyCode: 'ZWL',
+    currencyNameEn: 'Zimbabwean dollar',
+    flag: '🇿🇼',
+    nameEn: 'Zimbabwe',
+    nameLocal: 'Zimbabwe',
+    region: 'Africa',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '268',
+    code: 'SZ',
+    currencyCode: 'SZL',
+    currencyNameEn: 'Swazi lilangeni',
+    flag: '🇸🇿',
+    nameEn: 'Eswatini',
+    nameLocal: 'Swaziland',
+    region: 'Africa',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '389',
+    code: 'MK',
+    currencyCode: 'MKD',
+    currencyNameEn: 'Macedonian denar',
+    flag: '🇲🇰',
+    nameEn: 'North Macedonia',
+    nameLocal: 'Македонија',
+    region: 'Europe',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '63',
+    code: 'PH',
+    currencyCode: 'PHP',
+    currencyNameEn: 'Philippine peso',
+    flag: '🇵🇭',
+    nameEn: 'Philippines',
+    nameLocal: 'Philippines',
+    region: 'Asia & Pacific',
+    tinName: 'Tax Identification Number',
+    tinType: 'TIN'
+  },
+  {
+    callingCode: '31',
+    code: 'NL',
+    currencyCode: 'EUR',
+    currencyNameEn: 'Euro',
+    flag: '🇳🇱',
+    nameEn: 'Netherlands',
+    nameLocal: 'Nederland',
+
+    region: 'Europe',
+    tinName: 'Btw-nummer',
+    tinType: 'Btw-nr.'
+  },
+  {
+    callingCode: '971',
+    code: 'AE',
+    currencyCode: 'AED',
+    currencyNameEn: 'United Arab Emirates dirham',
+    flag: '🇦🇪',
+    nameEn: 'United Arab Emirates',
+    nameLocal: 'دولة الإمارات العربيّة المتّحدة',
+
+    region: 'Arab States',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '373',
+    code: 'MD',
+    currencyCode: 'MDL',
+    currencyNameEn: 'Moldovan leu',
+    flag: '🇲🇩',
+    nameEn: 'Republic of Moldova',
+    nameLocal: 'Moldova, Молдавия',
+    region: 'Europe',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '220',
+    code: 'GM',
+    currencyCode: 'GMD',
+    currencyNameEn: 'Gambian dalasi',
+    flag: '🇬🇲',
+    nameEn: 'Gambia',
+    nameLocal: 'The Gambia',
+    region: 'Africa',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '1',
+    code: 'DO',
+    currencyCode: 'DOP',
+    currencyNameEn: 'Dominican peso',
+    flag: '🇩🇴',
+    nameEn: 'Dominican Republic',
+    nameLocal: 'República Dominicana',
+
+    region: 'South/Latin America',
+    tinName: 'Registro Nacional del Contribuyente',
+    tinType: 'RNC'
+  },
+  {
+    callingCode: '249',
+    code: 'SD',
+    currencyCode: 'SDG',
+    currencyNameEn: 'Sudanese pound',
+    flag: '🇸🇩',
+    nameEn: 'Sudan',
+    nameLocal: 'السودان',
+
+    region: 'Arab States',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '856',
+    code: 'LA',
+    currencyCode: 'LAK',
+    currencyNameEn: 'Lao kip',
+    flag: '🇱🇦',
+    nameEn: "Lao People's Democratic Republic",
+    nameLocal: 'ປະຊາຊົນລາວ',
+    region: 'Asia & Pacific',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '886',
+    code: 'TW',
+    currencyCode: 'TWD',
+    currencyNameEn: 'New Taiwan dollar',
+    flag: '🇹🇼',
+    nameEn: 'Taiwan, Province of China',
+    nameLocal: 'Taiwan',
+    region: 'Asia & Pacific',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '242',
+    code: 'CG',
+    currencyCode: 'XAF',
+    currencyNameEn: 'CFA franc BEAC',
+    flag: '🇨🇬',
+    nameEn: 'Republic of the Congo',
+    nameLocal: 'République du Congo',
+
+    region: 'Africa',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '420',
+    code: 'CZ',
+    currencyCode: 'CZK',
+    currencyNameEn: 'Czech koruna',
+    flag: '🇨🇿',
+    nameEn: 'Czechia',
+    nameLocal: 'Česká republika',
+    region: 'Europe',
+    tinName: 'Daňové identifikační číslo',
+    tinType: 'DIČ'
+  },
+  {
+    callingCode: '44',
+    code: 'GB',
+    currencyCode: 'GBP',
+    currencyNameEn: 'Pound sterling',
+    flag: '🇬🇧',
+    nameEn: 'United Kingdom',
+    nameLocal: 'Great Britain',
+    region: 'Europe',
+    tinName: 'Value added tax registration number',
+    tinType: 'VAT Reg No'
+  },
+  {
+    callingCode: '227',
+    code: 'NE',
+    currencyCode: 'XOF',
+    currencyNameEn: 'CFA franc BCEAO',
+    flag: '🇳🇪',
+    nameEn: 'Niger',
+    nameLocal: 'Niger',
+
+    region: 'Africa',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '243',
+    code: 'CD',
+    currencyCode: 'CDF',
+    currencyNameEn: 'Congolese franc',
+    flag: '🇨🇩',
+    nameEn: 'Democratic Republic of the Congo',
+    nameLocal: 'Democratic Republic of the Congo',
+
+    region: 'Africa',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '1 242',
+    code: 'BS',
+    currencyCode: 'BSD',
+    currencyNameEn: 'Bahamian dollar',
+    flag: '🇧🇸',
+    nameEn: 'Commonwealth of The Bahamas',
+    nameLocal: 'Commonwealth of The Bahamas',
+    region: 'Caribbean',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '61 891',
+    code: 'CC',
+    currencyCode: 'AUD',
+    currencyNameEn: 'Australian dollar',
+    flag: '🇨🇨',
+    nameEn: 'Cocos (Keeling) Islands',
+    nameLocal: 'Pulu Kokos (Keeling)',
+    region: 'Australia',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '236',
+    code: 'CF',
+    currencyCode: 'XAF',
+    currencyNameEn: 'Central African CFA',
+    flag: '🇨🇫',
+    nameEn: 'Central African Republic',
+    nameLocal: 'République centrafricaine',
+
+    region: 'Africa',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '682',
+    code: 'CK',
+    currencyCode: 'NZD',
+    currencyNameEn: 'New Zealand dollar',
+    flag: '🇨🇰',
+    nameEn: 'Cook Islands',
+    nameLocal: "Kūki 'Āirani",
+    region: 'South Pacific Ocean',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '500',
+    code: 'FK',
+    currencyCode: 'FKP',
+    currencyNameEn: 'Falklands pound',
+    flag: '🇫🇰',
+    nameEn: 'Falkland Islands',
+    nameLocal: 'Falkland Islands',
+    region: 'South Atlantic Ocean',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '298',
+    code: 'FO',
+    currencyCode: 'DKK',
+    currencyNameEn: 'Faroese króna',
+    flag: '🇫🇴',
+    nameEn: 'Faroe Islands',
+    nameLocal: 'Færøerne',
+
+    region: 'Europe',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '672',
+    code: 'HM',
+    currencyCode: 'AUD',
+    currencyNameEn: 'Australian dollar',
+    flag: '🇭🇲',
+    nameEn: 'Territory of Heard Island and McDonald Islands',
+    nameLocal: 'Territory of Heard Island and McDonald Islands',
+    region: 'Indian Ocean',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '246',
+    code: 'IO',
+    currencyCode: 'USD',
+    currencyNameEn: 'United States Dollar',
+    flag: '🇮🇴',
+    nameEn: 'British Indian Ocean Territory',
+    nameLocal: 'British Indian Ocean Territory',
+    region: 'Indian Ocean',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '269',
+    code: 'KM',
+    currencyCode: 'KMF',
+    currencyNameEn: 'Comorian franc',
+    flag: '🇰🇲',
+    nameEn: 'Comoros',
+    nameLocal: 'Umoja wa Komori',
+
+    region: 'Indian Ocean',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '1 345',
+    code: 'KY',
+    currencyCode: 'KYD',
+    currencyNameEn: 'Cayman Islands dollar',
+    flag: '🇰🇾',
+    nameEn: 'Cayman Islands',
+    nameLocal: 'Cayman Islands',
+    region: 'Caribbean Sea',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '692',
+    code: 'MH',
+    currencyCode: 'USD',
+    currencyNameEn: 'United States dollar',
+    flag: '🇲🇭',
+    nameEn: 'Republic of the Marshall Islands',
+    nameLocal: 'Aolepān Aorōkin Ṃajeḷ',
+    region: 'Pacific Ocean',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '1 670',
+    code: 'MP',
+    currencyCode: 'USD',
+    currencyNameEn: 'United States dollar',
+    flag: '🇲🇵',
+    nameEn: 'Commonwealth of the Northern Mariana Islands',
+    nameLocal: 'Sankattan Siha Na Islas Mariånas',
+    region: 'Pacific Ocean',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '1 649',
+    code: 'TC',
+    currencyCode: 'USD',
+    currencyNameEn: 'United States dollar',
+    flag: '🇹🇨',
+    nameEn: 'Turks and Caicos Islands',
+    nameLocal: 'Turks and Caicos Islands',
+    region: 'Atlantic Ocean',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '672',
+    code: 'TF',
+    currencyCode: 'EUR',
+    currencyNameEn: 'Euro',
+    flag: '🇹🇫',
+    nameEn: 'French Southern and Antarctic Lands',
+    nameLocal: 'Terres australes et antarctiques françaises',
+    region: 'Indian Ocean',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '246',
+    code: 'UM',
+    currencyCode: 'USD',
+    currencyNameEn: 'United States dollar',
+    flag: '🇺🇲',
+    nameEn: 'United States Minor Outlying Islands',
+    nameLocal: 'United States Minor Outlying Islands',
+    region: 'Pacific Ocean',
+    tinName: '',
+    tinType: ''
+  },
+  {
+    callingCode: '39',
+    code: 'VA',
+    currencyCode: 'EUR',
+    currencyNameEn: 'Euro',
+    flag: '🇻🇦',
+    nameEn: 'Holy See',
+    nameLocal: 'Sancta Sedes',
+    region: 'Europe',
+    tinName: '',
+    tinType: ''
+  }
+]
+
+export const countryDataMap = keyBy(countriesData, (cd) => {
+  return cd.code.toLowerCase()
+})
+
+export const currencyDataMap = keyBy(countriesData, (cd) => {
+  return cd.currencyCode.toUpperCase()
+})
+
+export const countryDataByCurrencyMap = keyBy(countriesData, (cd) => {
+  return cd.currencyCode
+})
