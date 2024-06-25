@@ -8,7 +8,7 @@ import {
   useInfiniteQuery,
   useMutation,
   useQuery
-} from 'react-query'
+} from '@tanstack/react-query'
 
 import {
   addSocialSurvey,

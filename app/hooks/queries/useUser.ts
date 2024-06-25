@@ -9,8 +9,9 @@ import CustomerIO from 'app/utils/analytics/customer-io'
 import { countriesData } from 'app/utils/countriesData'
 import { transformQueryStatusToRiseStatus } from 'app/utils/utilFunctions'
 import { differenceInYears } from 'date-fns'
-import { useQuery } from 'react-query'
+import { useQuery } from '@tanstack/react-query'
 import { useDispatch } from 'react-redux'
+import { useEffect } from 'react'
 
 function extractUser(user: RiseUser) {
   return {
@@ -34,7 +35,7 @@ export const usePopulateUser = () => {
 
 export const USE_USER_CONFIG = {
   queryFn: getUserProfile,
-  queryKey: 'user'
+  queryKey: ['get-user-profile']
 }
 
 const setUserProps = (user: RiseUser) => {
@@ -103,14 +104,19 @@ const setUserProps = (user: RiseUser) => {
 
 export const useUser = () => {
   const populate = usePopulateUser()
-  const { status, data, ...query } = useQuery<RiseUser>({
-    onSuccess: (resp) => {
-      populate(resp)
-      setUserProps(resp)
-    },
+
+  const { status, data, ...query } = useQuery({
     select: extractUser,
-    ...USE_USER_CONFIG
+    queryFn: getUserProfile,
+    queryKey: ['get-user-profile']
   })
+
+  useEffect(() => {
+    if(data) {
+      populate(data)
+      setUserProps(data)
+    }
+  }, [data])
 
   const verifiedList: string[] = []
 

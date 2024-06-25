@@ -1,6 +1,6 @@
 import { toastMethods } from 'app/components/toast'
 import { Keyboard } from 'react-native'
-import { QueryClient } from 'react-query'
+import { QueryClient } from '@tanstack/react-query'
 
 export const queryClient = new QueryClient({
   defaultOptions: {

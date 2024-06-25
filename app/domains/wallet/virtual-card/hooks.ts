@@ -7,7 +7,7 @@ import { useScroller } from 'app/hooks/queries/useScroller/v2/useScroller'
 import { queryClient } from 'app/rq'
 import { convertKeysToCamelCase } from 'app/utils/utilFunctions'
 import type { AxiosError } from 'axios'
-import { useMutation, useQuery } from 'react-query'
+import { useMutation, useQuery } from '@tanstack/react-query'
 
 import { WALLET_QUERY_KEYS } from '../constants'
 import { toUICurrency } from '../hooks'

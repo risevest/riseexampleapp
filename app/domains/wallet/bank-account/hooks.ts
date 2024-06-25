@@ -2,7 +2,7 @@ import { useDisplayMessage, useInvalidateCache } from 'app/hooks'
 import { setUserProperties } from 'app/utils/analytics'
 import amplitude from 'app/utils/analytics/amplitude'
 import { AxiosError } from 'axios'
-import { useMutation, useQuery, useQueryClient } from 'react-query'
+import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 
 import { invalidateWalletRelatedQueries } from '../hooks'
 import { WithdrawalMethod } from '../transaction-request'

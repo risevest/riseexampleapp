@@ -1,6 +1,6 @@
 import { transformQueryStatusToRiseStatus } from 'app/utils/utilFunctions'
 import React, { useCallback, useState } from 'react'
-import { QueryKey, useInfiniteQuery } from 'react-query'
+import { QueryKey, useInfiniteQuery } from '@tanstack/react-query'
 
 export function useScroller<T>(
   query: (arg0: number) => Promise<ListResponse<T>>,

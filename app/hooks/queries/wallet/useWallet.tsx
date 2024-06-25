@@ -3,7 +3,7 @@ import { selectUserId } from 'app/redux/user/selector'
 import { setUserProperties } from 'app/utils/analytics'
 import { transformQueryStatusToRiseStatus } from 'app/utils/utilFunctions'
 import React from 'react'
-import { useQuery } from 'react-query'
+import { useQuery } from '@tanstack/react-query'
 import { useSelector } from 'react-redux'
 
 export const WALLET_QUERY_KEYS = {

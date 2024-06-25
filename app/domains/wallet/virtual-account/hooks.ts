@@ -3,7 +3,7 @@ import { useDisplayMessage } from 'app/hooks'
 import { queryClient } from 'app/rq'
 import { setUserProperties } from 'app/utils/analytics'
 import { VirtualAccountParams } from 'app/view/App/Wallet/funding/virtual-accounts/types'
-import { useMutation, useQuery } from 'react-query'
+import { useMutation, useQuery } from '@tanstack/react-query'
 
 import { toUICurrency } from '../hooks'
 import { Currency, ExternalWallet, ServerExternalWallet } from '../types'

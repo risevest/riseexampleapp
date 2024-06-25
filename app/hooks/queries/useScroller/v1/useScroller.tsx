@@ -4,7 +4,7 @@ import {
   QueryKey,
   useInfiniteQuery,
   UseInfiniteQueryOptions
-} from 'react-query'
+} from '@tanstack/react-query'
 
 export function useScroller<T>(
   query: (arg0: number) => Promise<{ data: T[]; meta: Meta }>,

@@ -1,6 +1,6 @@
 import { useDisplayMessage } from 'app/hooks'
 import { convertKeysToCamelCase } from 'app/utils/utilFunctions'
-import { useMutation, useQuery, useQueryClient } from 'react-query'
+import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 
 import { WALLET_QUERY_KEYS } from '../constants'
 import {

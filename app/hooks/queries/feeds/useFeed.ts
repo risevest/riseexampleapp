@@ -1,7 +1,7 @@
 import { fetchFeed, fetchHighlightedFeed } from 'app/api'
 import { AxiosError } from 'axios'
 import _ from 'lodash'
-import { useQuery } from 'react-query'
+import { useQuery } from '@tanstack/react-query'
 
 export async function getHighLightedFeed(): Promise<Feed> {
   try {

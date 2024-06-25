@@ -1,6 +1,6 @@
 import { getConfigSetting } from 'app/api/v2'
 import { transformQueryStatusToRiseStatus } from 'app/utils/utilFunctions'
-import { useQuery } from 'react-query'
+import { useQuery } from '@tanstack/react-query'
 
 export interface WithdrawalMethod {
   fee_type: string

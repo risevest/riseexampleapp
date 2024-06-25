@@ -1,7 +1,7 @@
 import { searchUsers } from 'app/api'
 import { useDisplayMessage } from 'app/hooks'
 import { useScroller } from 'app/hooks/queries/useScroller/v2/useScroller'
-import { useMutation } from 'react-query'
+import { useMutation } from '@tanstack/react-query'
 
 export const useSearchUser = (identifier: string) => {
   const { status, data, ...query } = useScroller<RiseUser>(

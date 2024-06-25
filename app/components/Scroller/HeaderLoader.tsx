@@ -1,6 +1,6 @@
 import React from 'react'
 import { ActivityIndicator, ViewStyle } from 'react-native'
-import { QueryStatus } from 'react-query'
+import { QueryStatus } from '@tanstack/react-query'
 
 export const HeaderLoader = ({
   isFetchingNextPage,

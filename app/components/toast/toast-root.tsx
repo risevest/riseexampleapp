@@ -1,16 +1,12 @@
-import _ from 'lodash'
-import React from 'react'
-import { useSafeAreaInsets } from 'react-native-safe-area-context'
-import Toast from 'react-native-toast-message'
+import _ from 'lodash';
+import React from 'react';
+import {useSafeAreaInsets} from 'react-native-safe-area-context';
+import Toast from 'react-native-toast-message';
 
-import { toastConfig, ToastNames } from './config'
+import {toastConfig, ToastNames} from './config';
 
-export function ToastRoot({
-  includedToasts
-}: {
-  includedToasts?: ToastNames[]
-}) {
-  const edges = useSafeAreaInsets()
+export function ToastRoot({includedToasts}: {includedToasts?: ToastNames[]}) {
+  const edges = useSafeAreaInsets();
 
   return (
     <Toast
@@ -20,5 +16,5 @@ export function ToastRoot({
       }
       topOffset={edges.top + 10}
     />
-  )
+  );
 }

@@ -1,6 +1,6 @@
-import { IconName } from 'app/assets/icons/types'
-import { toastMethods } from 'app/components/toast'
-import { extractErrorMessage } from 'app/utils/utilFunctions'
+import {IconName} from 'app/assets/icons/types';
+import {toastMethods} from 'app/components/toast';
+import {extractErrorMessage} from 'app/utils/utilFunctions';
 
 export const useDisplayMessage = (icon?: IconName) => {
   const displayError = (title: string, message: string) =>
@@ -9,12 +9,12 @@ export const useDisplayMessage = (icon?: IconName) => {
         contentProps: {
           description: message,
           icon: icon ?? 'alert-error-info',
-          title: title || 'Error'
+          title: title || 'Error',
         },
-        type: 'error'
+        type: 'error',
       },
-      type: 'alert'
-    })
+      type: 'alert',
+    });
 
   const displaySuccess = (title: string, message: string) =>
     toastMethods.show({
@@ -22,15 +22,15 @@ export const useDisplayMessage = (icon?: IconName) => {
         contentProps: {
           description: message,
           icon: icon || 'alert-feed',
-          title: title || 'Success'
-        }
+          title: title || 'Success',
+        },
       },
-      type: 'alert'
-    })
+      type: 'alert',
+    });
 
   const displayServerError = (error: any, title = 'Error') => {
-    const message = extractErrorMessage(error) ?? 'Something went wrong'
-    displayError(title, message)
-  }
-  return { displayError, displayServerError, displaySuccess }
-}
+    const message = extractErrorMessage(error) ?? 'Something went wrong';
+    displayError(title, message);
+  };
+  return {displayError, displayServerError, displaySuccess};
+};

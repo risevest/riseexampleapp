@@ -1,6 +1,6 @@
 import { useDisplayMessage } from 'app/hooks'
 import amplitude from 'app/utils/analytics/amplitude'
-import { useMutation, useQuery } from 'react-query'
+import { useMutation, useQuery } from '@tanstack/react-query'
 
 import { toUICurrency } from '../hooks'
 import { deleteCard, fundWithCard, getSavedCards } from './api'

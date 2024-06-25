@@ -1,5 +1,5 @@
 import { initiateTransactionRequest } from 'app/api/v2'
-import { useMutation } from 'react-query'
+import { useMutation } from '@tanstack/react-query'
 
 import { TransactionRequestPayload } from '../../../api/v2/transaction-requests'
 import { useInvalidateCache } from '../../queries/useInvalidateCache'

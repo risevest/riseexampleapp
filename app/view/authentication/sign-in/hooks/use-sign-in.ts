@@ -20,8 +20,10 @@ export function useSignIn() {
       password: string,
       method: 'biometrics' | 'email-password'
     ) => {
+      const data = { email, password, type: 'email' }
+ 
       loginMutation.mutate(
-        { email, password, type: 'email' },
+        data,
         {
           onSuccess: (session) => {
             handleAnalyticsAuthentication(session?.uuid, email)

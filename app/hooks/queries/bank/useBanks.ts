@@ -1,6 +1,6 @@
 import { fetchBanks } from 'app/api'
 import { transformQueryStatusToRiseStatus } from 'app/utils/utilFunctions'
-import { useQuery } from 'react-query'
+import { useQuery } from '@tanstack/react-query'
 
 export const useBanks = () => {
   const { status, data, ...query } = useQuery<IBank[]>('banks', () =>

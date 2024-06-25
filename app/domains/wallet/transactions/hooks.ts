@@ -1,6 +1,6 @@
 import { flatten } from 'lodash'
 import React, { useCallback, useState } from 'react'
-import { useInfiniteQuery, useQuery } from 'react-query'
+import { useInfiniteQuery, useQuery } from '@tanstack/react-query'
 
 import { getSingleWalletTransactionDetail, getWalletTransactions } from './api'
 import { TRANSACTIONS_QUERY_KEYS } from './constants'

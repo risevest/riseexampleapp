@@ -1,6 +1,6 @@
 import { useDisplayMessage, useInvalidateCache } from 'app/hooks'
 import { groupBy } from 'lodash'
-import { useMutation, useQuery } from 'react-query'
+import { useMutation, useQuery } from '@tanstack/react-query'
 
 import { toUICurrency } from '../hooks'
 import { Currency } from '../types'

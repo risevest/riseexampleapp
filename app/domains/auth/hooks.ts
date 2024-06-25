@@ -10,7 +10,7 @@ import { logEvent as fbLogEvent } from 'app/utils/analytics/fbsdk'
 import firebaseUtils from 'app/utils/analytics/firebaseUtils'
 import { setItemToStorage } from 'app/utils/asyncstorage'
 import { convertKeysToSnakeCase } from 'app/utils/utilFunctions'
-import { useMutation } from 'react-query'
+import { useMutation } from '@tanstack/react-query'
 import { useDispatch } from 'react-redux'
 
 import { VerifyPhoneNumberOTPPayload } from '../verification'

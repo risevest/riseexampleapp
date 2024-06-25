@@ -2733,6 +2733,11 @@
   resolved "https://registry.yarnpkg.com/@react-native-community/slider/-/slider-4.4.2.tgz#1fea0eb3ae31841fe87bd6c4fc67569066e9cf4b"
   integrity sha512-D9bv+3Vd2gairAhnRPAghwccgEmoM7g562pm8i4qB3Esrms5mggF81G3UvCyc0w3jjtFHh8dpQkfEoKiP0NW/Q==
 
+"@react-native-firebase/analytics@^20.1.0":
+  version "20.1.0"
+  resolved "https://registry.yarnpkg.com/@react-native-firebase/analytics/-/analytics-20.1.0.tgz#5ba10fffefc45c43d692c2bbde7f59e27023e347"
+  integrity sha512-tGwivElKEad0PaAwGxXO8ydNynnxUj/D2rtDG6QBtoU/L77hV6/UL0vh/vZcobWiBUv3sqBEkCg19VhA88j1og==
+
 "@react-native-firebase/app@^20.1.0":
   version "20.1.0"
   resolved "https://registry.yarnpkg.com/@react-native-firebase/app/-/app-20.1.0.tgz#86b9371290f92d51821b7299eede95336949f214"
@@ -10161,6 +10166,11 @@ react-native-animateable-text@^0.11.1:
   dependencies:
     deprecated-react-native-prop-types "^2.3.0"
     nullthrows "^1.1.1"
+
+react-native-appsflyer@^6.14.3:
+  version "6.14.3"
+  resolved "https://registry.yarnpkg.com/react-native-appsflyer/-/react-native-appsflyer-6.14.3.tgz#5dfb2dcd3bc3d5d55a67ee0d832cf78652724977"
+  integrity sha512-phdECchf+CT9lm4MnQfV4b6XxYhpf6NL818Ounyyiyw/N7CSfkhkTzj0uqA7SoQkMPwmTeZNh4bUD1oJpqox5g==
 
 react-native-camera@^4.2.1:
   version "4.2.1"

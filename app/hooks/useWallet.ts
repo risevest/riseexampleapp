@@ -1,7 +1,7 @@
 import instance from 'app/utils/axios'
 import { IWallet } from 'app/view/App/Wallet/interface'
 import React from 'react'
-import { useMutation, useQuery } from 'react-query'
+import { useMutation, useQuery } from '@tanstack/react-query'
 
 import { useInvalidateCache, useWalletQuery } from './queries'
 

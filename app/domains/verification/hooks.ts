@@ -6,7 +6,7 @@ import { AxiosError } from 'axios'
 import { groupBy } from 'lodash'
 import mime from 'mime'
 import { Platform } from 'react-native'
-import { useMutation, useQuery } from 'react-query'
+import { useMutation, useQuery } from '@tanstack/react-query'
 
 import {
   createIdentity,

@@ -1,6 +1,6 @@
 import { createBuildWealthPlan, createPlan } from 'app/api'
 import { logEvent } from 'app/utils/analytics/fbsdk'
-import { useMutation } from 'react-query'
+import { useMutation } from '@tanstack/react-query'
 
 import { useInvalidateCache } from '../../queries/useInvalidateCache'
 

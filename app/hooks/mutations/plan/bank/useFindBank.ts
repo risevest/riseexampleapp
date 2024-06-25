@@ -1,6 +1,6 @@
 import { findBank } from 'app/api'
 import { useDisplayMessage, useInvalidateCache } from 'app/hooks'
-import { useMutation } from 'react-query'
+import { useMutation } from '@tanstack/react-query'
 
 export const useFindBankAccount = () => {
   const { invalidateUserBankAccounts } = useInvalidateCache()

@@ -1,6 +1,6 @@
 import { joinChallenge } from 'app/api/challenges'
 import { useInvalidateCache } from 'app/hooks'
-import { useMutation } from 'react-query'
+import { useMutation } from '@tanstack/react-query'
 
 export const useJoinChallenge = () => {
   const { invalidatePlans, invalidateJoinedChallenges } = useInvalidateCache()

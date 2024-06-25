@@ -6,7 +6,7 @@ import {
 } from 'app/utils/utilFunctions'
 import { AxiosError } from 'axios'
 import _ from 'lodash'
-import { useMutation, useQuery } from 'react-query'
+import { useMutation, useQuery } from '@tanstack/react-query'
 
 interface VerifyPayload {
   taken: boolean

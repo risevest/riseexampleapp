@@ -1,7 +1,7 @@
 import { fetchUserBankAccounts } from 'app/api'
 import { setUserProperties } from 'app/utils/analytics'
 import { transformQueryStatusToRiseStatus } from 'app/utils/utilFunctions'
-import { useQuery } from 'react-query'
+import { useQuery } from '@tanstack/react-query'
 
 export const useUserBankAccounts = () => {
   const { status, data, ...query } = useQuery<IBankAccount[]>(

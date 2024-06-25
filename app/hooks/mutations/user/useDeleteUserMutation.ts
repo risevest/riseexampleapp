@@ -1,5 +1,5 @@
 import { selectUserId } from 'app/redux/user/selector'
-import { useMutation, useQueryClient } from 'react-query'
+import { useMutation, useQueryClient } from '@tanstack/react-query'
 import { useSelector } from 'react-redux'
 
 import { deleteUser } from '../../../api'

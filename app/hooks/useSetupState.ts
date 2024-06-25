@@ -5,7 +5,7 @@ import { getWallets } from 'app/domains/wallet/api'
 import { WALLET_QUERY_KEYS } from 'app/domains/wallet/constants'
 import { useWalletStats } from 'app/hooks/queries/wallet/useWallet'
 import React from 'react'
-import { useQueries } from 'react-query'
+import { useQueries } from '@tanstack/react-query'
 
 import { RATES_QUERY_CONFIG, USE_USER_CONFIG, usePopulateUser } from './queries'
 import { useToggle } from './useToggle'

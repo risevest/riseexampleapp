@@ -1,5 +1,5 @@
 import { transformQueryStatusToRiseStatus } from 'app/utils/utilFunctions'
-import { useQuery } from 'react-query'
+import { useQuery } from '@tanstack/react-query'
 
 import { getConfigSetting } from '../api/v2'
 

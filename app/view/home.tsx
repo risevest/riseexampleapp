@@ -14,6 +14,8 @@ import {
   import {PermissionsAndroid} from 'react-native';
   import messaging from '@react-native-firebase/messaging';
 import { useUser } from 'app/hooks';
+import { Box } from '@risemaxi/sarcelle';
+import { Screen } from 'app/components';
   
   const HomePage = () => {
     const {status, refetch, user} = useUser();
@@ -81,10 +83,10 @@ import { useUser } from 'app/hooks';
     };
   
     return (
-      <View style={MAIN_STYLE}>
-        <View style={[CENTRE, {display: isPending ? 'flex' : 'none'}]}>
+      <Box as={Screen} style={MAIN_STYLE}>
+        <Box style={[CENTRE, {display: isPending ? 'flex' : 'none'}]}>
           <ActivityIndicator />
-        </View>
+        </Box>
   
         {status === 'error' && <Retry onRetry={() => refetch()} />}
         <Text>HomePage</Text>
@@ -97,7 +99,7 @@ import { useUser } from 'app/hooks';
           title="Set user property"
         />
         <Button onPress={logEvent} disabled={!user} title="Log Event" />
-      </View>
+      </Box>
     );
   };
   

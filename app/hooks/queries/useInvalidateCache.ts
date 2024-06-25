@@ -2,7 +2,7 @@ import { WALLET_QUERY_KEYS } from 'app/domains/wallet/constants'
 import { TRANSACTIONS_QUERY_KEYS } from 'app/domains/wallet/transactions/constants'
 import { updateUser } from 'app/redux/user/actionCreators'
 import React from 'react'
-import { useQueryClient } from 'react-query'
+import { useQueryClient } from '@tanstack/react-query'
 import { useDispatch } from 'react-redux'
 
 import { WALLET_QUERY_CONFIG } from './wallet/useWallet'

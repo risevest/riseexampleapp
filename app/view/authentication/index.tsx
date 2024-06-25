@@ -1,13 +1,12 @@
-import { createNativeStackNavigator as createStackNavigator } from '@react-navigation/native-stack'
-import React from 'react'
+import {createNativeStackNavigator as createStackNavigator} from '@react-navigation/native-stack';
+import React from 'react';
 
-import ExternalLinks from '../App/More/ExternalLinks'
-import { AuthStackParamsList } from '../navigator/types/auth-stack'
-import InitialAuthRoute from './InitialRoute'
-import { IntroScreens } from './intro-screens/intro-screens'
-import { Info } from './Onboarding'
-import PinLogin from './Pin/PinLogin'
-import { SignIn } from './sign-in/sign-in'
+import {AuthStackParamsList} from '../navigator/types/auth-stack';
+import InitialAuthRoute from './InitialRoute';
+import {IntroScreens} from './intro-screens/intro-screens';
+import {Info} from './Onboarding';
+import PinLogin from './Pin/PinLogin';
+import {SignIn} from './sign-in/sign-in';
 import {
   ConfirmPIN,
   CreatePIN,
@@ -16,32 +15,32 @@ import {
   PINSuccessScreen,
   ReviewDetails,
   SetupPassword,
-  VerifyPhoneNumber
-} from './sign-up'
+  VerifyPhoneNumber,
+} from './sign-up';
+import HomePage from '../home';
 
-const Stack = createStackNavigator<AuthStackParamsList>()
+const Stack = createStackNavigator<AuthStackParamsList>();
 
 const AuthStack = () => {
   return (
     <Stack.Navigator
       initialRouteName="InitialRoute"
-      screenOptions={{ headerShown: false }}
-    >
+      screenOptions={{headerShown: false}}>
       <Stack.Screen
         component={IntroScreens}
         name="IntroScreens"
-        options={{ gestureEnabled: false }}
+        options={{gestureEnabled: false}}
       />
       <Stack.Screen component={InitialAuthRoute} name="InitialRoute" />
       <Stack.Screen
         component={SignIn}
         name="Login"
-        options={{ gestureEnabled: false }}
+        options={{gestureEnabled: false}}
       />
       <Stack.Screen component={PinLogin} name="PinLogin" />
 
       <Stack.Screen component={Info} name="Info" />
-      <Stack.Screen component={ExternalLinks} name="ExternalLinks" />
+      <Stack.Screen component={HomePage} name="ExternalLinks" />
 
       <Stack.Screen component={EnterPhoneNumber} name="EnterPhoneNumber" />
       <Stack.Screen component={VerifyPhoneNumber} name="VerifyPhoneNumber" />
@@ -54,7 +53,7 @@ const AuthStack = () => {
       {/* <Stack.Screen component={SocialSurvey} name="SocialSurvey" /> */}
       {/* <Stack.Screen component={SuccessScreen} name="SuccessScreen" /> */}
     </Stack.Navigator>
-  )
-}
+  );
+};
 
-export default AuthStack
+export default AuthStack;

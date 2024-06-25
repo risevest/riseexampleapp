@@ -1,18 +1,32 @@
-import instance from 'app/utils/axios';
-import {AxiosResponse} from 'axios';
+import instance from 'app/utils/axios'
 
 export const login = (email: string, password: string) =>
   instance
-    .post<{email: string; password: string}, AxiosResponse<Session>>(
+    .post(
       '/auth/login',
-      {email, password},
+      { email, password },
       {
-        timeout: 30000,
-      },
+        timeout: 30000
+      }
     )
-    .then(res => {
-      return res.data;
-    });
+    .then((res) => {
+      return res.data
+    })
 
-export const getUserProfile = () =>
-  instance.get<RiseUser>('/auth/profile').then(res => res.data);
+export const pinLogin = (email: string, pin: string) =>
+  instance
+    .post(
+      '/auth/pin-login',
+      { email, pin },
+      {
+        timeout: 30000
+      }
+    )
+    .then((res) => {
+      return res.data
+    })
+
+export const signup = (email: string, password: string) =>
+  instance.post('/users', { email, password }).then((res) => {
+    return res.data
+  })

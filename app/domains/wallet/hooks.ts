@@ -1,6 +1,6 @@
 import { useDisplayMessage, useInvalidateCache } from 'app/hooks'
 import { queryClient } from 'app/rq'
-import { useMutation, useQuery } from 'react-query'
+import { useMutation, useQuery } from '@tanstack/react-query'
 
 import {
   getAllRates,

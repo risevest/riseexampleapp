@@ -1,6 +1,6 @@
 import { useScroller } from 'app/hooks'
 import React from 'react'
-import { useQuery } from 'react-query'
+import { useQuery } from '@tanstack/react-query'
 
 import {
   fetchAssetBasedPlans,

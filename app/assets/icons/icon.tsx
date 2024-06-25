@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 
-import { IconProps, ICONS } from './types'
+import {IconProps, ICONS} from './types';
 
 export default function Icon({
   name,
@@ -8,12 +8,12 @@ export default function Icon({
   ignoreSize = false,
   ...props
 }: IconProps) {
-  const IconImpl = ICONS[name]
+  const IconImpl = ICONS[name];
   return IconImpl ? (
     ignoreSize ? (
       <IconImpl {...props} />
     ) : (
       <IconImpl height={size} width={size} {...props} />
     )
-  ) : null
+  ) : null;
 }

@@ -1,7 +1,7 @@
 import { useDisplayMessage, useInvalidateCache } from 'app/hooks'
 import { queryClient } from 'app/rq'
 import { convertKeysToCamelCase } from 'app/utils/utilFunctions'
-import { useMutation, useQuery } from 'react-query'
+import { useMutation, useQuery } from '@tanstack/react-query'
 
 import { WalletMethod } from '../transaction-request'
 import {

@@ -5,7 +5,7 @@ import Emoji from 'node-emoji'
 import { Alert, Platform } from 'react-native'
 import FingerPrintScanner from 'react-native-fingerprint-scanner'
 import { URL } from 'react-native-url-polyfill'
-import { QueryStatus } from 'react-query'
+import { QueryStatus } from '@tanstack/react-query'
 
 import haptics from './haptics'
 import {

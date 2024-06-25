@@ -1,4 +1,4 @@
-import { useQuery } from 'react-query'
+import { useQuery } from '@tanstack/react-query'
 
 import { getCampaigns } from './api'
 import { Campaign, CampaignServerType } from './types'

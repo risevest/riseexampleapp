@@ -1,6 +1,6 @@
 import { resolveBank } from 'app/api'
 import { useDisplayMessage, useInvalidateCache } from 'app/hooks'
-import { useMutation } from 'react-query'
+import { useMutation } from '@tanstack/react-query'
 
 export const useResolveBankAccount = () => {
   const { invalidateUserBankAccounts } = useInvalidateCache()

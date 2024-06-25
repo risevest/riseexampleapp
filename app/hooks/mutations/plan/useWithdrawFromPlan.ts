@@ -1,6 +1,6 @@
 import { withdrawFromPlan, WithdrawToPlanPayload } from 'app/api'
 import { useInvalidateCache } from 'app/hooks'
-import { useMutation } from 'react-query'
+import { useMutation } from '@tanstack/react-query'
 
 export const useWithdrawFromPlanMutation = (planId: PlanId) => {
   const { invalidatePlanRelatedCache } = useInvalidateCache({ planId })
