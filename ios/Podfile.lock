@@ -213,7 +213,7 @@ PODS:
     - PromisesSwift (~> 2.1)
   - FirebaseSharedSwift (10.28.0)
   - fmt (6.2.1)
-  - FreshchatSDK (6.2.0)
+  - FreshchatSDK (6.2.1)
   - glog (0.3.5)
   - GoogleAppMeasurement (10.27.0):
     - GoogleAppMeasurement/AdIdSupport (= 10.27.0)
@@ -1496,7 +1496,7 @@ PODS:
     - React-Core
     - RNFBApp
   - RNFreshchatSDK (4.6.3):
-    - FreshchatSDK (= 6.2.0)
+    - FreshchatSDK (= 6.2.1)
     - React
   - RNGestureHandler (2.14.1):
     - glog
@@ -2057,7 +2057,7 @@ SPEC CHECKSUMS:
   FirebaseSessions: 20da8500ad66bb12622743e170459bf62a0768e8
   FirebaseSharedSwift: 48de4aec81a6b79bb30404e5e6db43ea74848fed
   fmt: ff9d55029c625d3757ed641535fd4a75fedc7ce9
-  FreshchatSDK: 9b4f3158fe49ddacc053d142208fc2637fd469ff
+  FreshchatSDK: feb91436e3dd3d89bdc47fed108a53c83237286f
   glog: c5d68082e772fa1c511173d6b30a9de2c05a69a2
   GoogleAppMeasurement: f65fc137531af9ad647f1c0a42f3b6a4d3a98049
   GoogleDataTransport: 6c09b596d841063d76d4288cc2d2f42cc36e1e2a
@@ -2157,7 +2157,7 @@ SPEC CHECKSUMS:
   RNFBInAppMessaging: dfa27689c36793d0395d90738eb8be8735ec133a
   RNFBMessaging: 85f661b9f16e2b081e6809ef63d3daa4458b9042
   RNFBRemoteConfig: a8325e2d3772127358dd2e7d5e39c9ad3e3379ac
-  RNFreshchatSDK: 5aa9769464daea2f4e4ac062136fde5aa4e0a823
+  RNFreshchatSDK: 1ba4ccd59e450bbcaa60218f7822a7c28fc0a7b3
   RNGestureHandler: 12833709769dde5fdb36ec9d4cdf4d3a1a024122
   RNKeychain: f75b8c8b2f17d3b2aa1f25b4a0ac5b83d947ff8f
   RNPermissions: a08ad5c45533e1a3ba63768a2d97586b7ba06333
