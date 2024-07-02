@@ -8,6 +8,12 @@
       }
     },
     "owner": "risevest",
-    "slug": "rise-lite"
+    "slug": "rise-lite",
+    "runtimeVersion": "1.0.0",
+    "updates": {
+      "url": "https://u.expo.dev/e408af13-3915-4f94-aa77-17be98464351"
+    },
+    "android": {},
+    "ios": {}
   }
 }

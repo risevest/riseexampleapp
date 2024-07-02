@@ -1,7 +1,8 @@
 #import <RCTAppDelegate.h>
-#import <Expo/Expo.h>
 #import <UIKit/UIKit.h>
+#import <Expo/Expo.h>
+#import <FirebaseMessaging/FIRMessaging.h>
 
-@interface AppDelegate : EXAppDelegateWrapper
+@interface AppDelegate : EXAppDelegateWrapper<FIRMessagingDelegate>
 
 @end
